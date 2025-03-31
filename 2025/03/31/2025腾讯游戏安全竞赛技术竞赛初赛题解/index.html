@@ -30,7 +30,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/images/redefine-og.webp">
 <meta property="article:published_time" content="2025-03-30T16:00:00.000Z">
-<meta property="article:modified_time" content="2025-03-31T02:34:48.467Z">
+<meta property="article:modified_time" content="2025-03-31T02:43:43.561Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="Windows">
 <meta property="article:tag" content="REVERSE">
@@ -427,8 +427,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2025-03-31 10:34:48</span>
-            <span class="mobile">2025-03-31 10:34:48</span>
+            <span class="desktop">2025-03-31 10:43:43</span>
+            <span class="mobile">2025-03-31 10:43:43</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -479,64 +479,164 @@
 
 		<div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
 			<h1 id="逆向分析"><a href="#逆向分析" class="headerlink" title="逆向分析"></a>逆向分析</h1><h2 id="r3层分析"><a href="#r3层分析" class="headerlink" title="r3层分析"></a>r3层分析</h2><p>首先拿到赛题对r3的程序进行分析,发现在初始化函数这里有sub_140001000函数 正在进行异或操作</p>
+<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2025/03/31/2025%E8%85%BE%E8%AE%AF%E6%B8%B8%E6%88%8F%E5%AE%89%E5%85%A8%E7%AB%9E%E8%B5%9B%E6%8A%80%E6%9C%AF%E7%AB%9E%E8%B5%9B%E5%88%9D%E8%B5%9B%E9%A2%98%E8%A7%A3/image-20250329002230261.png"
+                      class="" title="image-20250329002230261"
+                >
 
-
-
+<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2025/03/31/2025%E8%85%BE%E8%AE%AF%E6%B8%B8%E6%88%8F%E5%AE%89%E5%85%A8%E7%AB%9E%E8%B5%9B%E6%8A%80%E6%9C%AF%E7%AB%9E%E8%B5%9B%E5%88%9D%E8%B5%9B%E9%A2%98%E8%A7%A3/image-20250329002353310.png"
+                      class="" title="image-20250329002353310"
+                >
 
 <p>经过动态调试可得v0里面的变量为一张表</p>
-
+<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2025/03/31/2025%E8%85%BE%E8%AE%AF%E6%B8%B8%E6%88%8F%E5%AE%89%E5%85%A8%E7%AB%9E%E8%B5%9B%E6%8A%80%E6%9C%AF%E7%AB%9E%E8%B5%9B%E5%88%9D%E8%B5%9B%E9%A2%98%E8%A7%A3/image-20250329002645737.png"
+                      class="" title="image-20250329002645737"
+                >
 
 <p>但我们对qword_7FF79B30AFD8这个地址进行交叉引用的时候我们发现在一个函数里面引用了它，并且这个函数好像是进行base58加密,因此我们知道这里应该是进行了base58换表加密,sub_7FF79B2D20D0</p>
+<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2025/03/31/2025%E8%85%BE%E8%AE%AF%E6%B8%B8%E6%88%8F%E5%AE%89%E5%85%A8%E7%AB%9E%E8%B5%9B%E6%8A%80%E6%9C%AF%E7%AB%9E%E8%B5%9B%E5%88%9D%E8%B5%9B%E9%A2%98%E8%A7%A3/image-20250329002708875.png"
+                      class="" title="image-20250329002708875"
+                >
 
-
-
+<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2025/03/31/2025%E8%85%BE%E8%AE%AF%E6%B8%B8%E6%88%8F%E5%AE%89%E5%85%A8%E7%AB%9E%E8%B5%9B%E6%8A%80%E6%9C%AF%E7%AB%9E%E8%B5%9B%E5%88%9D%E8%B5%9B%E9%A2%98%E8%A7%A3/image-20250329002902831.png"
+                      class="" title="image-20250329002902831"
+                >
 
 <p>然后在初始化函数里面还存在另一个函数sub_7FF79B2D10D0,此函数里的sub_7FF79B2D1C90里面存在反调试函数</p>
+<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2025/03/31/2025%E8%85%BE%E8%AE%AF%E6%B8%B8%E6%88%8F%E5%AE%89%E5%85%A8%E7%AB%9E%E8%B5%9B%E6%8A%80%E6%9C%AF%E7%AB%9E%E8%B5%9B%E5%88%9D%E8%B5%9B%E9%A2%98%E8%A7%A3/image-20250329003200841.png"
+                      class="" title="image-20250329003200841"
+                >
 
-
-
+<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2025/03/31/2025%E8%85%BE%E8%AE%AF%E6%B8%B8%E6%88%8F%E5%AE%89%E5%85%A8%E7%AB%9E%E8%B5%9B%E6%8A%80%E6%9C%AF%E7%AB%9E%E8%B5%9B%E5%88%9D%E8%B5%9B%E9%A2%98%E8%A7%A3/image-20250329003211003.png"
+                      class="" title="image-20250329003211003"
+                >
 
 <p>我们选择直接不走这个函数，在下图这里nop掉</p>
-
+<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2025/03/31/2025%E8%85%BE%E8%AE%AF%E6%B8%B8%E6%88%8F%E5%AE%89%E5%85%A8%E7%AB%9E%E8%B5%9B%E6%8A%80%E6%9C%AF%E7%AB%9E%E8%B5%9B%E5%88%9D%E8%B5%9B%E9%A2%98%E8%A7%A3/image-20250329004235545.png"
+                      class="" title="image-20250329004235545"
+                >
 
 <p>然后我们就可以断在main函数</p>
-
+<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2025/03/31/2025%E8%85%BE%E8%AE%AF%E6%B8%B8%E6%88%8F%E5%AE%89%E5%85%A8%E7%AB%9E%E8%B5%9B%E6%8A%80%E6%9C%AF%E7%AB%9E%E8%B5%9B%E5%88%9D%E8%B5%9B%E9%A2%98%E8%A7%A3/image-20250329004323593.png"
+                      class="" title="image-20250329004323593"
+                >
 
 <p>以下这个函数我们也要nop掉，因为我们只分析r3层的因此使用不到r0,之后就会检测我们输入的flag的前4位是否为ACE_</p>
-
+<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2025/03/31/2025%E8%85%BE%E8%AE%AF%E6%B8%B8%E6%88%8F%E5%AE%89%E5%85%A8%E7%AB%9E%E8%B5%9B%E6%8A%80%E6%9C%AF%E7%AB%9E%E8%B5%9B%E5%88%9D%E8%B5%9B%E9%A2%98%E8%A7%A3/image-20250329004827322.png"
+                      class="" title="image-20250329004827322"
+                >
 
 <p>之后就是一个密钥的初始化</p>
-
+<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2025/03/31/2025%E8%85%BE%E8%AE%AF%E6%B8%B8%E6%88%8F%E5%AE%89%E5%85%A8%E7%AB%9E%E8%B5%9B%E6%8A%80%E6%9C%AF%E7%AB%9E%E8%B5%9B%E5%88%9D%E8%B5%9B%E9%A2%98%E8%A7%A3/image-20250329004944776.png"
+                      class="" title="image-20250329004944776"
+                >
 
 <p>以下的两个函数分别为base58加密和异或,并且在在经过base58加密之后字符串的顺序还倒置了,异或的密钥为73787800(“sxx”)</p>
-
+<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2025/03/31/2025%E8%85%BE%E8%AE%AF%E6%B8%B8%E6%88%8F%E5%AE%89%E5%85%A8%E7%AB%9E%E8%B5%9B%E6%8A%80%E6%9C%AF%E7%AB%9E%E8%B5%9B%E5%88%9D%E8%B5%9B%E9%A2%98%E8%A7%A3/image-20250329005157822.png"
+                      class="" title="image-20250329005157822"
+                >
 
 <p>因此r3的加密就是base58+reverse+xor</p>
 <h2 id="r0层分析"><a href="#r0层分析" class="headerlink" title="r0层分析"></a>r0层分析</h2><p>在很多函数里面都存在这样的花指令格式如下:</p>
 <div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">push reg</span><br><span class="line">mov reg, xxxxxxx</span><br><span class="line">pushfq</span><br><span class="line">xxxx</span><br><span class="line">popfq</span><br><span class="line">jmp reg</span><br><span class="line">xxxxx</span><br><span class="line">pop reg</span><br></pre></td></tr></table></figure></div>
 
-
+<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2025/03/31/2025%E8%85%BE%E8%AE%AF%E6%B8%B8%E6%88%8F%E5%AE%89%E5%85%A8%E7%AB%9E%E8%B5%9B%E6%8A%80%E6%9C%AF%E7%AB%9E%E8%B5%9B%E5%88%9D%E8%B5%9B%E9%A2%98%E8%A7%A3/image-20250329005615544.png"
+                      class="" title="image-20250329005615544"
+                >
 
 <p>我们需要手动计算地址然后就能得到我们的真正逻辑,我们可以注意到我们的第一个函数sub_1400010A0，是一个典型的tea加密，但是解出来的是错的，然后我们对他进行交叉引用，发现多处引用了它，然后我们就猜测可能对这一处的函数进行了hook,果然待我们去除花指令之后就得到了真正的逻辑</p>
-
+<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2025/03/31/2025%E8%85%BE%E8%AE%AF%E6%B8%B8%E6%88%8F%E5%AE%89%E5%85%A8%E7%AB%9E%E8%B5%9B%E6%8A%80%E6%9C%AF%E7%AB%9E%E8%B5%9B%E5%88%9D%E8%B5%9B%E9%A2%98%E8%A7%A3/image-20250329005944559.png"
+                      class="" title="image-20250329005944559"
+                >
 
 <p>但是我们可以在9B0A处下断点，然后直接定位到hook之后的地址处提取shellcode,这样我们就可以修复正确的tea加密</p>
 <p>以下为去除花指令之后的效果:</p>
-
+<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2025/03/31/2025%E8%85%BE%E8%AE%AF%E6%B8%B8%E6%88%8F%E5%AE%89%E5%85%A8%E7%AB%9E%E8%B5%9B%E6%8A%80%E6%9C%AF%E7%AB%9E%E8%B5%9B%E5%88%9D%E8%B5%9B%E9%A2%98%E8%A7%A3/QQ%E5%9B%BE%E7%89%8720250329010326.png"
+                      class="" title="QQ图片20250329010326"
+                >
 
 <p>然后就可以跟进去提取shellcode,然后修复回跳地址</p>
+<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2025/03/31/2025%E8%85%BE%E8%AE%AF%E6%B8%B8%E6%88%8F%E5%AE%89%E5%85%A8%E7%AB%9E%E8%B5%9B%E6%8A%80%E6%9C%AF%E7%AB%9E%E8%B5%9B%E5%88%9D%E8%B5%9B%E9%A2%98%E8%A7%A3/image-20250329010844530.png"
+                      class="" title="image-20250329010844530"
+                >
 
+<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2025/03/31/2025%E8%85%BE%E8%AE%AF%E6%B8%B8%E6%88%8F%E5%AE%89%E5%85%A8%E7%AB%9E%E8%B5%9B%E6%8A%80%E6%9C%AF%E7%AB%9E%E8%B5%9B%E5%88%9D%E8%B5%9B%E9%A2%98%E8%A7%A3/image-20250329010906569.png"
+                      class="" title="image-20250329010906569"
+                >
 
-
-
-
+<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2025/03/31/2025%E8%85%BE%E8%AE%AF%E6%B8%B8%E6%88%8F%E5%AE%89%E5%85%A8%E7%AB%9E%E8%B5%9B%E6%8A%80%E6%9C%AF%E7%AB%9E%E8%B5%9B%E5%88%9D%E8%B5%9B%E9%A2%98%E8%A7%A3/image-20250329010943318.png"
+                      class="" title="image-20250329010943318"
+                >
 
 <h1 id="解密代码"><a href="#解密代码" class="headerlink" title="解密代码"></a>解密代码</h1><div class="code-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdint.h&gt;</span></span></span><br><span class="line"><span class="type">void</span> <span class="title function_">decipher</span><span class="params">(<span class="type">unsigned</span> <span class="type">int</span> num_rounds, <span class="type">uint32_t</span> *v, <span class="type">uint32_t</span>  key[<span class="number">4</span>])</span> &#123;</span><br><span class="line">    <span class="type">unsigned</span> <span class="type">int</span> i;</span><br><span class="line">    <span class="type">uint32_t</span> v0 = v[<span class="number">0</span>], v1 = v[<span class="number">1</span>], delta = <span class="number">0x9E3779B9</span>, sum = delta * num_rounds;</span><br><span class="line">    <span class="type">uint32_t</span> v3 = key[<span class="number">0</span>];</span><br><span class="line">    <span class="type">uint32_t</span> v5 = key[<span class="number">1</span>];</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; num_rounds; i++) &#123;</span><br><span class="line">        v1 -= (sum + key[(sum &gt;&gt; <span class="number">11</span>) &amp; <span class="number">3</span>]) ^ (v0 + ((<span class="number">16</span> * v0) ^ (v0 &gt;&gt; <span class="number">5</span>)));</span><br><span class="line">        v0 -= (sum + v1) ^ (v3 + <span class="number">16</span> * v1) ^ (v5 + (v1 &gt;&gt; <span class="number">5</span>));</span><br><span class="line">        </span><br><span class="line">        sum -= delta;</span><br><span class="line">    &#125;</span><br><span class="line">    v[<span class="number">0</span>] = v0; v[<span class="number">1</span>] = v1;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//密文</span></span><br><span class="line">    <span class="type">uint32_t</span> v[<span class="number">42</span>] = &#123; <span class="number">0x0EC367B8</span>, <span class="number">0xC9DA9044</span>, <span class="number">0xDA6C2DEB</span>, <span class="number">0x88DDC9C3</span>, <span class="number">0x32A01575</span>, <span class="number">0x231DD0B4</span>, <span class="number">0x4B9E8A74</span>, <span class="number">0xD75D3E74</span>, <span class="number">0xEAAB8712</span>, <span class="number">0xE704E888</span>, <span class="number">0xE01A31AC</span>, <span class="number">0xECAE205C</span>, <span class="number">0xA7BE7467</span>, <span class="number">0x0C6252A3</span>, <span class="number">0x1AEFEC4E</span>, <span class="number">0xC40DED44</span>, <span class="number">0xC3C842CC</span>, <span class="number">0xDE4A0C0E</span>, <span class="number">0x7C24F3FC</span>, <span class="number">0x8FB8D001</span>, <span class="number">0x11153E6E</span>, <span class="number">0x530ED15C</span>, <span class="number">0xF4214811</span>, <span class="number">0xBEB517E0</span>, <span class="number">0x63F91634</span>, <span class="number">0x4D96F8A5</span>, <span class="number">0xFE23EAC8</span>, <span class="number">0x2C607ADF</span>, <span class="number">0xCC43D85C</span>, <span class="number">0xFF186C5B</span>, <span class="number">0x8763E1A5</span>, <span class="number">0x9187BD58</span>, <span class="number">0x87D1069B</span>, <span class="number">0xD7878D7B</span>, <span class="number">0x836E6B68</span>, <span class="number">0x55A0C63F</span>, <span class="number">0xD979FDB3</span>, <span class="number">0x3E524DEE</span>, <span class="number">0x7AB35C82</span>, <span class="number">0xA2F4DA8D</span>, <span class="number">0x1708BA4C</span>, <span class="number">0x710653E6</span> &#125;;</span><br><span class="line">    <span class="comment">//密钥</span></span><br><span class="line">    <span class="type">uint32_t</span> k[<span class="number">4</span>] = &#123; <span class="number">0x41</span>,<span class="number">0x43</span>,<span class="number">0x45</span>,<span class="number">0x36</span> &#125;;</span><br><span class="line">    <span class="comment">//轮数</span></span><br><span class="line">    <span class="type">unsigned</span> <span class="type">int</span> r = <span class="number">32</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">42</span>; i += <span class="number">2</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        decipher(r, v + i, k);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">42</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; <span class="number">1</span>; j++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;%02x&quot;</span>, (v[i] &gt;&gt; (<span class="number">8</span> * j)) &amp; <span class="number">0xff</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
 
 <p>得出来的十六进制数据再用cyberchef进行求解</p>
+<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2025/03/31/2025%E8%85%BE%E8%AE%AF%E6%B8%B8%E6%88%8F%E5%AE%89%E5%85%A8%E7%AB%9E%E8%B5%9B%E6%8A%80%E6%9C%AF%E7%AB%9E%E8%B5%9B%E5%88%9D%E8%B5%9B%E9%A2%98%E8%A7%A3/image-20250329011338281.png"
+                      class="" title="image-20250329011338281"
+                >
 
-
-<h1 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h1>
+<h1 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h1><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2025/03/31/2025%E8%85%BE%E8%AE%AF%E6%B8%B8%E6%88%8F%E5%AE%89%E5%85%A8%E7%AB%9E%E8%B5%9B%E6%8A%80%E6%9C%AF%E7%AB%9E%E8%B5%9B%E5%88%9D%E8%B5%9B%E9%A2%98%E8%A7%A3/image-20250329011414598.png"
+                      class="" title="image-20250329011414598"
+                >
 		</div>
 
 		
@@ -550,7 +650,7 @@
         
             <li>
                 <strong>Updated at
-                    :</strong> 2025-03-31 10:34:48
+                    :</strong> 2025-03-31 10:43:43
             </li>
         
         <li>
