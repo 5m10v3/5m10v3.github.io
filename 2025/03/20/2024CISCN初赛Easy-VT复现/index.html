@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    
+    <meta name="author" content="5m10v3">
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="http://example.com/2025/03/20/2024ciscn初赛easy-vt复现/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+    
+    
+        
+        <meta name="description" content="Hexo Theme Redefine, Redefine Your Hexo Journey.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2024CISCN初赛Easy-VT复现">
+<meta property="og:url" content="http://example.com/2025/03/20/2024CISCN%E5%88%9D%E8%B5%9BEasy-VT%E5%A4%8D%E7%8E%B0/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Hexo Theme Redefine, Redefine Your Hexo Journey.">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/images/redefine-og.webp">
+<meta property="article:published_time" content="2025-03-19T16:00:00.000Z">
+<meta property="article:modified_time" content="2025-03-31T02:07:11.131Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="Windows">
+<meta property="article:tag" content="REVERSE">
+<meta property="article:tag" content="obfuscation">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/images/redefine-og.webp">
+    
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="/images/1.jpg" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/1.jpg">
+    <meta name="theme-color" content="#A31F34">
+    <link rel="shortcut icon" href="/images/1.jpg">
+    <!--- Page Info-->
+    
+    <title>
+        
+            2024CISCN初赛Easy-VT复现 | 5m10v3のBlog
+        
+    </title>
+
+    
+<link rel="stylesheet" href="/fonts/Chillax/chillax.css">
+
+
+    <!--- Inject Part-->
+    
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+        
+<link rel="stylesheet" href="/css/build/tailwind.css">
+
+    
+
+    
+<link rel="stylesheet" href="/fonts/GeistMono/geist-mono.css">
+
+    
+<link rel="stylesheet" href="/fonts/Geist/geist.css">
+
+    <!--- Font Part-->
+    
+    
+    
+    
+    
+    
+
+    <script id="hexo-configurations">
+    window.config = {"hostname":"example.com","root":"/","language":"en"};
+    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"delete_mask":false,"title_alignment":"left","headings_top_spacing":{"h1":"3.2rem","h2":"2.4rem","h3":"1.9rem","h4":"1.6rem","h5":"1.4rem","h6":"1.3rem"}},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":false,"auto":false,"list":[]},"code_block":{"copy":true,"style":"mac","highlight_theme":{"light":"github","dark":"vs2015"},"font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":{"enable":true,"default":"cc_by_nc_sa"},"lazyload":true,"pangu_js":false,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null,"default_mode":"light"},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null},"title":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":false,"percentage":true},"website_counter":{"url":"https://cn.vercount.one/js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"preloader":{"enable":false,"custom_message":null},"open_graph":{"enable":true,"image":"/images/redefine-og.webp","description":"Hexo Theme Redefine, Redefine Your Hexo Journey."},"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"https://s2.loli.net/2025/02/25/4mfHxsDtAWFhLTo.jpg","dark":"https://files.codelife.cc/wallpaper/wallspic/167264.jpg?x-oss-process=image/resize,limit_0,m_fill,w_2560,h_1440/quality,Q_92/format,webp"},"title":"5m10v3のblog","subtitle":{"text":["随心所欲地享受每一天\\(￣︶￣*\\))","随时随地，浏览记录O(∩_∩)O","欢迎来到我的博客(｡･∀･)ﾉﾞ","正在努力更新博客(ง •_•)ง"],"hitokoto":{"enable":false,"show_author":false,"api":"https://v1.hitokoto.cn"},"typing_speed":150,"backing_speed":30,"starting_delay":1000,"backing_delay":3000,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":false,"style":"default","links":{"github":null,"instagram":null,"zhihu":null,"twitter":null,"email":null},"qrs":{"weixin":null}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null,"lrc":null}]},"mermaid":{"enable":false,"version":"11.4.1"}},"version":"2.8.2","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"width":{"home":"1200px","pages":"1200px"},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"Tags":{"icon":"fa-solid fa-tags","path":"/tags"},"About Me":{"icon":"fa-regular fa-link","path":"/about"},"Links":{"icon":"fa-regular fa-link","path":"/links"}},"search":{"enable":true,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"cloud"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":"一只进击的逆向菜鸡","show_on_mobile":true,"links":null},"article_date_format":"auto","excerpt_length":200,"categories":{"enable":true,"limit":9999},"tags":{"enable":true,"limit":9999}},"footerStart":"2022/8/17 11:45:14"};
+    window.lang_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+    window.data = {"masonry":false};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    
+<link rel="stylesheet" href="/fontawesome/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/brands.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/solid.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/regular.min.css">
+
+    
+    
+    
+    
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+
+<body>
+	<div class="progress-bar-container">
+	
+
+	
+	<span class="pjax-progress-bar"></span>
+	<!--        <span class="swup-progress-icon">-->
+	<!--            <i class="fa-solid fa-circle-notch fa-spin"></i>-->
+	<!--        </span>-->
+	
+</div>
+
+<main class="page-container" id="swup">
+
+	
+
+	<div class="main-content-container flex flex-col justify-between min-h-dvh">
+		<div class="main-content-header">
+			<header class="navbar-container px-6 md:px-12">
+    <div class="navbar-content transition-navbar ">
+        <div class="left">
+            
+                <a class="logo-image h-8 w-8 sm:w-10 sm:h-10 mr-3" href="/">
+                    <img src="/images/1.jpg" class="w-full h-full rounded-sm">
+                </a>
+            
+            <a class="logo-title" href="/">
+                
+                5m10v3のBlog
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/"
+                                        >
+                                    <i class="fa-regular fa-house fa-fw"></i>
+                                    HOME
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/archives"
+                                        >
+                                    <i class="fa-regular fa-archive fa-fw"></i>
+                                    ARCHIVES
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/tags"
+                                        >
+                                    <i class="fa-solid fa-tags fa-fw"></i>
+                                    TAGS
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/about"
+                                        >
+                                    <i class="fa-regular fa-link fa-fw"></i>
+                                    ABOUT ME
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/links"
+                                        >
+                                    <i class="fa-regular fa-link fa-fw"></i>
+                                    LINKS
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                    
+                        <li class="navbar-item search search-popup-trigger">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile sheet -->
+    <div class="navbar-drawer h-dvh w-full absolute top-0 left-0 bg-background-color flex flex-col justify-between">
+        <ul class="drawer-navbar-list flex flex-col px-4 justify-center items-start">
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/"
+                        >
+                            <span>
+                                HOME
+                            </span>
+                            
+                                <i class="fa-regular fa-house fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/archives"
+                        >
+                            <span>
+                                ARCHIVES
+                            </span>
+                            
+                                <i class="fa-regular fa-archive fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/tags"
+                        >
+                            <span>
+                                TAGS
+                            </span>
+                            
+                                <i class="fa-solid fa-tags fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/about"
+                        >
+                            <span>
+                                ABOUT ME
+                            </span>
+                            
+                                <i class="fa-regular fa-link fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/links"
+                        >
+                            <span>
+                                LINKS
+                            </span>
+                            
+                                <i class="fa-regular fa-link fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+
+            
+            
+        </ul>
+
+        <div class="statistics flex justify-around my-2.5">
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">5</div>
+        <div class="label text-third-text-color text-sm">Tags</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">0</div>
+        <div class="label text-third-text-color text-sm">Categories</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">3</div>
+        <div class="label text-third-text-color text-sm">Posts</div>
+    </a>
+</div>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+		</div>
+
+		<div class="main-content-body transition-fade-up">
+			
+
+			<div class="main-content">
+				<div class="post-page-container flex relative justify-between box-border w-full h-full">
+	<div class="article-content-container">
+
+		<div class="article-title relative w-full">
+			
+			
+			
+			<img src="/./2024CISCN%E5%88%9D%E8%B5%9BEasy-VT%E5%A4%8D%E7%8E%B0.assets/images.jpg" alt="2024CISCN初赛Easy-VT复现" class="w-full h-60 sm:h-72 md:h-80 object-cover sm:rounded-t-large dark:brightness-75" />
+			
+			<div class="w-full flex items-center absolute bottom-0 justify-start">
+				<h1 class="article-title-cover text-center mx-6 my-6 text-second-text-color bg-background-color-transparent px-4 py-3 text-3xl sm:text-4xl md:text-5xl font-semibold backdrop-blur-lg rounded-xl border border-border-color ">2024CISCN初赛Easy-VT复现</h1>
+			</div>
+			
+		</div>
+
+		
+		<div class="article-header flex flex-row gap-2 items-center px-2 sm:px-6 md:px-8">
+			<div class="avatar w-[46px] h-[46px] flex-shrink-0 rounded-medium border border-border-color p-[1px]">
+				<img src="/images/1.jpg">
+			</div>
+			<div class="info flex flex-col justify-between">
+				<div class="author flex items-center">
+					<span class="name text-default-text-color text-lg font-semibold">5m10v3</span>
+					
+				</div>
+				<div class="meta-info">
+					<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2025-03-20</span>
+        <span class="mobile">2025-03-20</span>
+        <span class="hover-info">Created</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2025-03-31 10:07:11</span>
+            <span class="mobile">2025-03-31 10:07:11</span>
+            <span class="hover-info">Updated</span>
+        </span>
+    
+
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/Windows/">Windows</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/REVERSE/">REVERSE</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/obfuscation/">obfuscation</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+				</div>
+			</div>
+		</div>
+		
+
+		
+
+
+		<div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
+			<p>这道题当时国赛的时候是0解,但是前一阵子看几个师傅写的文章确实不错,因此就探索一下其中的奥秘,笔者将会采用两种方式来解决这道题</p>
+<h1 id="逆向分析"><a href="#逆向分析" class="headerlink" title="逆向分析"></a>逆向分析</h1><p>第一步进行查壳,其实当时拿到这个赛题的时候就在想Themida,VMP这些强壳都上了还玩鸡毛,但是要想的是这只是CTF比赛肯定不会这么变态</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./2024CISCN%E5%88%9D%E8%B5%9BEasy-VT%E5%A4%8D%E7%8E%B0.assets/image-20250320152455096.png"
+                      alt="image-20250320152455096"
+                ></p>
+<p>我们可以通过Segments窗口查看一下那些新增的节,发现只是徒有虚名,这些只是混淆选手,那些新增的例如.vmp都没有东西</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./2024CISCN%E5%88%9D%E8%B5%9BEasy-VT%E5%A4%8D%E7%8E%B0.assets/image-20250320153152016.png"
+                      alt="image-20250320153152016"
+                ></p>
+<h2 id="方法一-利用脚本去除混淆"><a href="#方法一-利用脚本去除混淆" class="headerlink" title="方法一:利用脚本去除混淆"></a>方法一:利用脚本去除混淆</h2><p>发现有很多类型的花指令,这里做个总结:</p>
+<h3 id="jz-1"><a href="#jz-1" class="headerlink" title="jz +1"></a>jz +1</h3><p>这个指令就是跳过了一个字节,它的特征码为0F 84 01 00 00 00 00</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./2024CISCN%E5%88%9D%E8%B5%9BEasy-VT%E5%A4%8D%E7%8E%B0.assets/image-20250320170031930.png"
+                      alt="image-20250320170031930"
+                ></p>
+<h3 id="jz-2"><a href="#jz-2" class="headerlink" title="jz+2"></a>jz+2</h3><p>与上面jz+1同理</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./2024CISCN%E5%88%9D%E8%B5%9BEasy-VT%E5%A4%8D%E7%8E%B0.assets/image-20250320210742341.png"
+                      alt="image-20250320210742341"
+                ></p>
+<h3 id="jz-8"><a href="#jz-8" class="headerlink" title="jz+8"></a>jz+8</h3><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./2024CISCN%E5%88%9D%E8%B5%9BEasy-VT%E5%A4%8D%E7%8E%B0.assets/image-20250320210851486.png"
+                      alt="image-20250320210851486"
+                ></p>
+<h3 id="jge-6"><a href="#jge-6" class="headerlink" title="jge+6"></a>jge+6</h3><p>此处花指令的特征码为0F 8D 06 00 00 00</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./2024CISCN%E5%88%9D%E8%B5%9BEasy-VT%E5%A4%8D%E7%8E%B0.assets/image-20250320185016461.png"
+                      alt="image-20250320185016461"
+                ></p>
+<h3 id="jmp-6"><a href="#jmp-6" class="headerlink" title="jmp+6"></a>jmp+6</h3><p>这里的特征码就是E9 06 00 00 00 00这里多加一个00</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./2024CISCN%E5%88%9D%E8%B5%9BEasy-VT%E5%A4%8D%E7%8E%B0.assets/image-20250320170957797.png"
+                      alt="image-20250320170957797"
+                ></p>
+<h3 id="jmp-23"><a href="#jmp-23" class="headerlink" title="jmp -23"></a>jmp -23</h3><p>这个花指令很有意思啊他是往回跳,EB E9 往回跳了23个字节</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./2024CISCN%E5%88%9D%E8%B5%9BEasy-VT%E5%A4%8D%E7%8E%B0.assets/image-20250320200010648.png"
+                      alt="image-20250320200010648"
+                ></p>
+<h3 id="cmp-reg-0E9h"><a href="#cmp-reg-0E9h" class="headerlink" title="cmp  reg,0E9h"></a>cmp  reg,0E9h</h3><p>这里的cmp al,0E9h 是一个无效的比较，后面不会因为标志位的改变而跳转到哪</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./2024CISCN%E5%88%9D%E8%B5%9BEasy-VT%E5%A4%8D%E7%8E%B0.assets/image-20250320211727384.png"
+                      alt="image-20250320211727384"
+                ></p>
+<p>另外的几个就是单独几处有问题,我们可以单独列出</p>
+<p>跳转无效地址，这里其实还可以留个心眼,交叉引用一下这里的地址看看有没有跳转到这里的，在4166D0这里存在跳转</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./2024CISCN%E5%88%9D%E8%B5%9BEasy-VT%E5%A4%8D%E7%8E%B0.assets/image-20250321105206183.png"
+                      alt="image-20250321105206183"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./2024CISCN%E5%88%9D%E8%B5%9BEasy-VT%E5%A4%8D%E7%8E%B0.assets/image-20250321110705094.png"
+                      alt="image-20250321110705094"
+                ></p>
+<p>41878D处会影响sub_418779这个函数的生成</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./2024CISCN%E5%88%9D%E8%B5%9BEasy-VT%E5%A4%8D%E7%8E%B0.assets/image-20250321111545687.png"
+                      alt="image-20250321111545687"
+                ></p>
+<h3 id="去花脚本编写"><a href="#去花脚本编写" class="headerlink" title="去花脚本编写"></a>去花脚本编写</h3><p>然后我们idapython去花脚本的思路呢就是遍历每一个段,然后根据特征码然后再去patch,这里笔者呢根据其它的师傅了解了一个新的指令</p>
+<h4 id="UD2"><a href="#UD2" class="headerlink" title="UD2"></a>UD2</h4><p>含义如下:</p>
+<p>undefined instruction. 该指令用于生成一个无效操作码。当CPU试图执行无效或未定义的操作码时，将发生无效的操作码异常。UD2指令除了引发无效的操作码异常外，与NOP指令相同。</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">这里的异常是指CPU在发生“错误”时生成的。大多数情况下，有些异常并不是真正的错误，而是中断的一种类型。比如: Page Fault。异常分类如下：</span><br><span class="line"></span><br><span class="line">Faults (错误)：这些错误可以被纠正，程序可以像什么都没有发生一样继续运行。</span><br><span class="line">Traps (陷阱)：陷阱指令执行后会立即被报告。</span><br><span class="line">Aborts (终止)：一些严重的不可恢复的错误。</span><br></pre></td></tr></table></figure></div>
+
+<p>其实就是比nop指令多了处理异常的能力</p>
+<div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> idc</span><br><span class="line"><span class="keyword">import</span> idautils</span><br><span class="line"><span class="keyword">import</span> ida_search</span><br><span class="line"><span class="keyword">import</span> ida_segment</span><br><span class="line">seg=<span class="number">0</span></span><br><span class="line">cur_ea=<span class="number">0</span></span><br><span class="line">ea=<span class="number">0</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">main</span>():</span><br><span class="line">  <span class="keyword">for</span> seg <span class="keyword">in</span>  idautils.Segments():</span><br><span class="line">     seg_name = idc.get_segm_name(seg)</span><br><span class="line">     <span class="keyword">if</span> seg_name!=<span class="string">&#x27;.text&#x27;</span> <span class="keyword">and</span> seg_name!=<span class="string">&#x27;UPX0&#x27;</span>:</span><br><span class="line">        <span class="keyword">continue</span></span><br><span class="line">     <span class="built_in">print</span>(<span class="string">&quot;正在处理段: %s (0x%x)&quot;</span>%(seg_name,seg))</span><br><span class="line">     start_ea = seg</span><br><span class="line">     end_ea = idc.get_segm_end(seg)</span><br><span class="line">     </span><br><span class="line">     cur_ea = start_ea</span><br><span class="line">     pattern1 = <span class="string">&quot;0F 84 01 00 00 00&quot;</span></span><br><span class="line">     <span class="keyword">while</span>(<span class="literal">True</span>):</span><br><span class="line">       ea = ida_search.find_binary(cur_ea,end_ea,pattern1, <span class="number">16</span>, ida_search.SEARCH_DOWN)</span><br><span class="line">       <span class="keyword">if</span> ea &gt; end_ea <span class="keyword">or</span> ea == idc.BADADDR:</span><br><span class="line">          <span class="keyword">break</span></span><br><span class="line">       <span class="built_in">print</span>(<span class="string">&quot;Found Pattern1 at 0x%x&quot;</span>%ea)</span><br><span class="line">       idc.patch_byte(ea+<span class="number">6</span>,<span class="number">0x90</span>)</span><br><span class="line">       cur_ea = ea+<span class="number">1</span></span><br><span class="line">     </span><br><span class="line">     cur_ea = start_ea</span><br><span class="line">     pattern2 = <span class="string">&quot;0F 84 02 00 00 00&quot;</span></span><br><span class="line">     <span class="keyword">while</span>(<span class="literal">True</span>):</span><br><span class="line">       ea = ida_search.find_binary(cur_ea,end_ea,pattern2, <span class="number">16</span>, ida_search.SEARCH_DOWN)</span><br><span class="line">       <span class="keyword">if</span> ea &gt; end_ea <span class="keyword">or</span> ea == idc.BADADDR:</span><br><span class="line">          <span class="keyword">break</span></span><br><span class="line">       <span class="built_in">print</span>(<span class="string">&quot;Found Pattern2 at 0x%x&quot;</span>%ea)</span><br><span class="line">       idc.patch_word(ea+<span class="number">6</span>,<span class="number">0x9090</span>)</span><br><span class="line">       cur_ea = ea+<span class="number">1</span></span><br><span class="line"></span><br><span class="line">     cur_ea = start_ea</span><br><span class="line">     pattern3 = <span class="string">&quot;0F 84 08 00 00 00&quot;</span></span><br><span class="line">     <span class="keyword">while</span>(<span class="literal">True</span>):</span><br><span class="line">       ea = ida_search.find_binary(cur_ea,end_ea,pattern3, <span class="number">16</span>, ida_search.SEARCH_DOWN)</span><br><span class="line">       <span class="keyword">if</span> ea &gt; end_ea <span class="keyword">or</span> ea == idc.BADADDR:</span><br><span class="line">          <span class="keyword">break</span></span><br><span class="line">       <span class="built_in">print</span>(<span class="string">&quot;Found Pattern3 at 0x%x&quot;</span>%ea)</span><br><span class="line">       idc.patch_qword(ea+<span class="number">6</span>,<span class="number">0x9090909090909090</span>)</span><br><span class="line">       cur_ea = ea+<span class="number">1</span></span><br><span class="line">    </span><br><span class="line">     cur_ea = start_ea</span><br><span class="line">     pattern4 = <span class="string">&quot;0F 8D 06 00 00 00&quot;</span></span><br><span class="line">     <span class="keyword">while</span>(<span class="literal">True</span>):</span><br><span class="line">       ea = ida_search.find_binary(cur_ea,end_ea,pattern4, <span class="number">16</span>, ida_search.SEARCH_DOWN)</span><br><span class="line">       <span class="keyword">if</span> ea &gt; end_ea <span class="keyword">or</span> ea == idc.BADADDR:</span><br><span class="line">          <span class="keyword">break</span></span><br><span class="line">       <span class="built_in">print</span>(<span class="string">&quot;Found Pattern4 at 0x%x&quot;</span>%ea)</span><br><span class="line">       idc.patch_word(ea+<span class="number">6</span>,<span class="number">0x0B0F</span>) <span class="comment">#ud2</span></span><br><span class="line">       idc.patch_dword(ea+<span class="number">8</span>,<span class="number">0x90909090</span>)</span><br><span class="line">       cur_ea = ea+<span class="number">1</span></span><br><span class="line">    </span><br><span class="line">     cur_ea = start_ea</span><br><span class="line">     pattern5 = <span class="string">&quot;E9 06 00 00 00 00&quot;</span></span><br><span class="line">     <span class="keyword">while</span>(<span class="literal">True</span>):</span><br><span class="line">       ea = ida_search.find_binary(cur_ea,end_ea,pattern5, <span class="number">16</span>, ida_search.SEARCH_DOWN)</span><br><span class="line">       <span class="keyword">if</span> ea &gt; end_ea <span class="keyword">or</span> ea == idc.BADADDR:</span><br><span class="line">          <span class="keyword">break</span></span><br><span class="line">       <span class="built_in">print</span>(<span class="string">&quot;Found Pattern5 at 0x%x&quot;</span>%ea)</span><br><span class="line">       idc.patch_word(ea+<span class="number">5</span>,<span class="number">0x0B0F</span>)</span><br><span class="line">       idc.patch_dword(ea+<span class="number">7</span>,<span class="number">0x90909090</span>)</span><br><span class="line">       cur_ea = ea+<span class="number">1</span></span><br><span class="line">    </span><br><span class="line">     cur_ea = start_ea</span><br><span class="line">     pattern6 = <span class="string">&quot;EB E9&quot;</span></span><br><span class="line">     <span class="keyword">while</span>(<span class="literal">True</span>):</span><br><span class="line">       ea = ida_search.find_binary(cur_ea,end_ea,pattern6, <span class="number">16</span>, ida_search.SEARCH_DOWN)</span><br><span class="line">       <span class="keyword">if</span> ea &gt; end_ea <span class="keyword">or</span> ea == idc.BADADDR:</span><br><span class="line">          <span class="keyword">break</span></span><br><span class="line">       <span class="built_in">print</span>(<span class="string">&quot;Found Pattern6 at 0x%x&quot;</span>%ea)</span><br><span class="line">       idc.patch_word(ea,<span class="number">0x0B0F</span>)</span><br><span class="line">       idc.patch_dword(ea+<span class="number">2</span>,<span class="number">0x90909090</span>)</span><br><span class="line">       cur_ea = ea+<span class="number">1</span></span><br><span class="line">    </span><br><span class="line">     cur_ea = start_ea</span><br><span class="line">     pattern7 = <span class="string">&quot;3C E9&quot;</span></span><br><span class="line">     <span class="keyword">while</span>(<span class="literal">True</span>):</span><br><span class="line">       ea = ida_search.find_binary(cur_ea,end_ea,pattern7, <span class="number">16</span>, ida_search.SEARCH_DOWN)</span><br><span class="line">       <span class="keyword">if</span> ea &gt; end_ea <span class="keyword">or</span> ea == idc.BADADDR:</span><br><span class="line">          <span class="keyword">break</span></span><br><span class="line">       <span class="built_in">print</span>(<span class="string">&quot;Found Pattern7 at 0x%x&quot;</span>%ea)</span><br><span class="line">       idc.patch_word(ea+<span class="number">2</span>,<span class="number">0x0B0F</span>)</span><br><span class="line">       idc.patch_word(ea+<span class="number">4</span>,<span class="number">0x9090</span>)      </span><br><span class="line">       cur_ea = ea+<span class="number">1</span></span><br><span class="line">  idc.patch_word(<span class="number">0x413824</span>,<span class="number">0x0B0F</span>)</span><br><span class="line">  idc.patch_word(<span class="number">0x41878D</span>, <span class="number">0x0B0F</span>)</span><br><span class="line">  idc.patch_qword(<span class="number">0x41878F</span>, <span class="number">0x9090909090909090</span>)</span><br><span class="line">  idc.patch_byte(<span class="number">0x418797</span>, <span class="number">0x90</span>)</span><br><span class="line"></span><br><span class="line">          </span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">     main()</span><br><span class="line">     <span class="built_in">print</span>(<span class="string">&quot;Finshed!!!!&quot;</span>)</span><br></pre></td></tr></table></figure></div>
+
+<p>运行完去花脚本,然后就保存为vt_patched.exe,然后打开之后我们发现大部分的函数都显示出来了，然后可以定位到sub_4098F0为我们的main函数</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./2024CISCN%E5%88%9D%E8%B5%9BEasy-VT%E5%A4%8D%E7%8E%B0.assets/image-20250321162949217.png"
+                      alt="image-20250321162949217"
+                ></p>
+<p>在main函数里面我们发现有很多这样的变量,发现他们只被读取了,没有写入,因此我们可以定义变量byte0-9</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./2024CISCN%E5%88%9D%E8%B5%9BEasy-VT%E5%A4%8D%E7%8E%B0.assets/image-20250321163810765.png"
+                      alt="image-20250321163810765"
+                ></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./2024CISCN%E5%88%9D%E8%B5%9BEasy-VT%E5%A4%8D%E7%8E%B0.assets/image-20250321164102147.png"
+                      alt="image-20250321164102147"
+                ></p>
+<p>然后我们就会发现在程序里面有很多永真永假跳转,</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./2024CISCN%E5%88%9D%E8%B5%9BEasy-VT%E5%A4%8D%E7%8E%B0.assets/image-20250329182946268.png"
+                      alt="image-20250329182946268"
+                ></p>
+<div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> idc</span><br><span class="line"><span class="keyword">import</span> idautils</span><br><span class="line"><span class="keyword">import</span> ida_bytes</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">main</span>():</span><br><span class="line">    <span class="comment"># 遍历段</span></span><br><span class="line">    <span class="keyword">for</span> seg <span class="keyword">in</span> idautils.Segments():</span><br><span class="line">        <span class="comment"># 获取段名称</span></span><br><span class="line">        sgm_name = idc.get_segm_name(seg)</span><br><span class="line">        <span class="keyword">if</span> sgm_name != <span class="string">&quot;.text&quot;</span> <span class="keyword">and</span> sgm_name != <span class="string">&quot;UPX0&quot;</span>:</span><br><span class="line">            <span class="keyword">continue</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;正在处理段: %s (0x%x)&quot;</span> % (sgm_name, seg))</span><br><span class="line">        </span><br><span class="line">        start_ea = seg</span><br><span class="line">        end_ea = idc.get_segm_end(seg)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 遍历每个段的每一条指令</span></span><br><span class="line">        cur_ea = start_ea</span><br><span class="line">        <span class="keyword">while</span> cur_ea &lt; end_ea <span class="keyword">and</span> cur_ea != idc.BADADDR:</span><br><span class="line">            <span class="comment"># 获取指令的助记符和操作数</span></span><br><span class="line">            mnemonic = idc.print_insn_mnem(cur_ea)</span><br><span class="line">            op1 = idc.print_operand(cur_ea, <span class="number">0</span>)</span><br><span class="line">            op2 = idc.print_operand(cur_ea, <span class="number">1</span>)</span><br><span class="line">            </span><br><span class="line">            <span class="comment"># 检测指令，只处理byte0-9</span></span><br><span class="line">            <span class="keyword">if</span> mnemonic == <span class="string">&quot;movsx&quot;</span> <span class="keyword">and</span> op2.startswith(<span class="string">&quot;cs:byte&quot;</span>):</span><br><span class="line">                <span class="keyword">try</span>:</span><br><span class="line">                    index = <span class="built_in">int</span>(op2[<span class="number">7</span>:])  <span class="comment"># 提取byte后面的数字</span></span><br><span class="line">                    <span class="keyword">if</span> <span class="number">0</span> &lt;= index &lt;= <span class="number">9</span>:</span><br><span class="line">                        <span class="keyword">if</span> op1 == <span class="string">&quot;eax&quot;</span>:</span><br><span class="line">                            ida_bytes.patch_byte(cur_ea, <span class="number">0xB8</span>)</span><br><span class="line">                        <span class="keyword">elif</span> op1 == <span class="string">&quot;ecx&quot;</span>:</span><br><span class="line">                            ida_bytes.patch_byte(cur_ea, <span class="number">0xB9</span>)</span><br><span class="line">                        <span class="keyword">elif</span> op1 == <span class="string">&quot;edx&quot;</span>:</span><br><span class="line">                            ida_bytes.patch_byte(cur_ea, <span class="number">0xBA</span>)</span><br><span class="line">                        </span><br><span class="line">                        ida_bytes.patch_dword(cur_ea + <span class="number">1</span>, index)</span><br><span class="line">                        ida_bytes.patch_word(cur_ea + <span class="number">5</span>, <span class="number">0x9090</span>)</span><br><span class="line">                        idc.create_insn(cur_ea)</span><br><span class="line">                <span class="keyword">except</span> ValueError:</span><br><span class="line">                    <span class="keyword">pass</span></span><br><span class="line">            </span><br><span class="line">            <span class="comment"># 获取下一条指令</span></span><br><span class="line">            next_ea = idc.next_head(cur_ea, end_ea)</span><br><span class="line">            <span class="keyword">if</span> next_ea == idc.BADADDR <span class="keyword">or</span> next_ea &lt;= cur_ea:</span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">            cur_ea = next_ea</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    main()</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Finished!!!!&quot;</span>)</span><br></pre></td></tr></table></figure></div>
+
+<p>然后我们在往下分析的时候发现了很多语义混淆的地方,这里有三处引用最多的函数,分别是sub_41307D,sub_413162,sub_4131D6,因为我们知道函数的返回值一般存储在rax&#x2F;eax中,因此我们可以改成与rax&#x2F;eax的赋值有关的,sub_41307D()是返回一个参数我们可以命名ret_arg1,sub_413162()是返回一个数字1我们可以命名为ret_1,sub_4131D6()这个函数最后是返回传入的第二个参数因此可以命名为ret_arg2</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/./2024CISCN%E5%88%9D%E8%B5%9BEasy-VT%E5%A4%8D%E7%8E%B0.assets/image-20250329193357292.png"
+                      alt="image-20250329193357292"
+                ></p>
+<h3 id="去除语义混淆脚本编写"><a href="#去除语义混淆脚本编写" class="headerlink" title="去除语义混淆脚本编写"></a>去除语义混淆脚本编写</h3><div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> idc</span><br><span class="line"><span class="keyword">import</span> idautils</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">main</span>():</span><br><span class="line">    <span class="keyword">for</span> seg <span class="keyword">in</span> idautils.Segments():</span><br><span class="line">        sgm_name = idc.get_segm_name(seg)</span><br><span class="line">        <span class="keyword">if</span> sgm_name != <span class="string">&quot;.text&quot;</span> <span class="keyword">and</span> sgm_name != <span class="string">&quot;UPX0&quot;</span>:</span><br><span class="line">            <span class="keyword">continue</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;正在处理段: %s (0x%x)&quot;</span> % (sgm_name, seg))</span><br><span class="line">        start_ea = seg</span><br><span class="line">        end_ea  = idc.get_segm_end(seg)</span><br><span class="line">        cur_ea  = start_ea</span><br><span class="line">        op1=<span class="number">0</span></span><br><span class="line">        <span class="keyword">while</span> start_ea &lt; end_ea <span class="keyword">and</span> cur_ea != idc.BADADDR:</span><br><span class="line">            <span class="comment">#获取指令的助记符和操作数</span></span><br><span class="line">            mnemonic = idc.print_insn_mnem(cur_ea)</span><br><span class="line">            op1 = idc.print_operand(cur_ea,<span class="number">0</span>)</span><br><span class="line">            <span class="keyword">if</span> mnemonic == <span class="string">&quot;call&quot;</span>:</span><br><span class="line">                <span class="keyword">if</span> op1 == <span class="string">&quot;ret_arg1&quot;</span>:</span><br><span class="line">                    <span class="built_in">print</span>(<span class="string">&quot;Target Ins at 0x%X (call ret_arg1)&quot;</span>%(cur_ea))</span><br><span class="line">                    <span class="comment">#REX.W=1（0x48）表示指令操作 64 位数据</span></span><br><span class="line">                    idc.patch_byte(cur_ea, <span class="number">0x48</span>);       <span class="comment"># REX.W 前缀</span></span><br><span class="line">                    idc.patch_byte(cur_ea + <span class="number">1</span>, <span class="number">0x89</span>)   <span class="comment"># mov 操作码</span></span><br><span class="line">                    idc.patch_byte(cur_ea + <span class="number">2</span>, <span class="number">0xC8</span>)   <span class="comment"># modrm: mov r/m64, r64 (rax = rcx)</span></span><br><span class="line">  </span><br><span class="line"></span><br><span class="line">                    idc.patch_byte(cur_ea + <span class="number">3</span>, <span class="number">0x90</span>)   <span class="comment"># nop</span></span><br><span class="line">                    idc.patch_byte(cur_ea + <span class="number">4</span>, <span class="number">0x90</span>)   <span class="comment"># nop</span></span><br><span class="line">  </span><br><span class="line">                    idc.create_insn(cur_ea)</span><br><span class="line">                <span class="keyword">elif</span> op1 == <span class="string">&quot;ret_1&quot;</span>:</span><br><span class="line">                    <span class="built_in">print</span>(<span class="string">&quot;Target Ins at 0x%X (call ret_1)&quot;</span>%(cur_ea))</span><br><span class="line">                    <span class="comment">#mov eax,1(5个字节)</span></span><br><span class="line">                    idc.patch_byte(cur_ea,<span class="number">0xB8</span>)</span><br><span class="line">                    idc.patch_dword(cur_ea+<span class="number">1</span>,<span class="number">1</span>)</span><br><span class="line">                    idc.create_insn(cur_ea)</span><br><span class="line">                </span><br><span class="line">                <span class="keyword">elif</span> op1 == <span class="string">&quot;ret_arg2&quot;</span>:</span><br><span class="line">                    <span class="built_in">print</span>(<span class="string">&quot;Target Ins at 0x%X (call ret_arg2)&quot;</span>%(cur_ea))</span><br><span class="line">                    <span class="comment">#REX.W=1（0x48）表示指令操作 64 位数据</span></span><br><span class="line">                    idc.patch_byte(cur_ea, <span class="number">0x48</span>);       <span class="comment"># REX.W 前缀</span></span><br><span class="line">                    idc.patch_byte(cur_ea + <span class="number">1</span>, <span class="number">0x89</span>)   <span class="comment"># mov 操作码</span></span><br><span class="line">                    idc.patch_byte(cur_ea + <span class="number">2</span>, <span class="number">0xD0</span>)   <span class="comment"># modrm: mov r/m64, r64 (rax = rcx)</span></span><br><span class="line">  </span><br><span class="line"></span><br><span class="line">                    idc.patch_byte(cur_ea + <span class="number">3</span>, <span class="number">0x90</span>)   <span class="comment"># nop</span></span><br><span class="line">                    idc.patch_byte(cur_ea + <span class="number">4</span>, <span class="number">0x90</span>)   <span class="comment"># nop</span></span><br><span class="line"></span><br><span class="line">                    idc.create_insn(cur_ea)</span><br><span class="line">            <span class="comment"># 获取下一条指令</span></span><br><span class="line">            next_ea = idc.next_head(cur_ea, end_ea)</span><br><span class="line">            <span class="keyword">if</span> next_ea == idc.BADADDR <span class="keyword">or</span> next_ea &lt;= cur_ea:</span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">            cur_ea = next_ea</span><br><span class="line"></span><br><span class="line">                     </span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="方法二-动态调试"><a href="#方法二-动态调试" class="headerlink" title="方法二:动态调试"></a>方法二:动态调试</h2><p>正在编写中。。。。。。。。。</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结:"></a>总结:</h1><p>笔者复现这个是为了学习一个师傅们去混淆的一种思考方式,以及编写去混淆脚本</p>
+<h1 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h1><p><a class="link"   target="_blank" rel="noopener" href="https://www.52pojie.cn/thread-2008309-1-1.html" >https://www.52pojie.cn/thread-2008309-1-1.html<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<p><a class="link"   target="_blank" rel="noopener" href="https://blog.hxzzz.asia/archives/362/" >https://blog.hxzzz.asia/archives/362/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+
+		</div>
+
+		
+		<div class="post-copyright-info w-full my-8 px-2 sm:px-6 md:px-8">
+			<div class="article-copyright-info-container">
+    <ul>
+        <li><strong>Title:</strong> 2024CISCN初赛Easy-VT复现</li>
+        <li><strong>Author:</strong> 5m10v3</li>
+        <li><strong>Created at
+                :</strong> 2025-03-20 00:00:00</li>
+        
+            <li>
+                <strong>Updated at
+                    :</strong> 2025-03-31 10:07:11
+            </li>
+        
+        <li>
+            <strong>Link:</strong> https://redefine.ohevan.com/2025/03/20/2024CISCN初赛Easy-VT复现/
+        </li>
+        <li>
+            <strong>
+                License:
+            </strong>
+            
+
+            
+                This work is licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0">CC BY-NC-SA 4.0</a>.
+            
+        </li>
+    </ul>
+</div>
+
+		</div>
+		
+
+		
+		<ul class="post-tags-box text-lg mt-1.5 flex-wrap justify-center flex md:hidden">
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/Windows/">#Windows</a>&nbsp;
+			</li>
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/REVERSE/">#REVERSE</a>&nbsp;
+			</li>
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/obfuscation/">#obfuscation</a>&nbsp;
+			</li>
+			
+		</ul>
+		
+
+		
+
+		
+		<div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
+			
+			<div class="article-prev border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+				<a class="prev" rel="prev" href="/2025/03/31/2025%E8%85%BE%E8%AE%AF%E6%B8%B8%E6%88%8F%E5%AE%89%E5%85%A8%E7%AB%9E%E8%B5%9B%E6%8A%80%E6%9C%AF%E7%AB%9E%E8%B5%9B%E5%88%9D%E8%B5%9B%E9%A2%98%E8%A7%A3/">
+					<span class="left arrow-icon flex justify-center items-center">
+						<i class="fa-solid fa-chevron-left"></i>
+					</span>
+					<span class="title flex justify-center items-center">
+						<span class="post-nav-title-item">2024CISCN初赛Easy-VT复现</span>
+						<span class="post-nav-item">Prev posts</span>
+					</span>
+				</a>
+			</div>
+			
+			
+			<div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+				<a class="next" rel="next" href="/2025/02/24/CE%E9%AD%94%E6%94%B9%E8%AF%A6%E7%BB%86%E8%AE%B0%E5%BD%95/">
+					<span class="title flex justify-center items-center">
+						<span class="post-nav-title-item">CE魔改详细记录</span>
+						<span class="post-nav-item">Next posts</span>
+					</span>
+					<span class="right arrow-icon flex justify-center items-center">
+						<i class="fa-solid fa-chevron-right"></i>
+					</span>
+				</a>
+			</div>
+			
+		</div>
+		
+
+
+		
+		<div class="comment-container px-2 sm:px-6 md:px-8 pb-8">
+			<div class="comments-container mt-10 w-full ">
+    <div id="comment-anchor" class="w-full h-2.5"></div>
+    <div class="comment-area-title w-full my-1.5 md:my-2.5 text-xl md:text-3xl font-bold">
+        Comments
+    </div>
+    
+
+        
+            
+    <div id="waline"></div>
+    <script type="module" data-swup-reload-script>
+      import { init } from '/js/libs/waline.mjs';
+
+      function loadWaline() {
+        init({
+          el: '#waline',
+          serverURL: 'https://example.example.com',
+          lang: 'zh-CN',
+          dark: 'body[class~="dark-mode"]',
+          reaction: false,
+          requiredMeta: ['nick', 'mail'],
+          emoji: [],
+          
+          
+        });
+      }
+
+      if (typeof swup !== 'undefined') {
+        loadWaline();
+      } else {
+        window.addEventListener('DOMContentLoaded', loadWaline);
+      }
+    </script>
+
+
+
+        
+    
+</div>
+
+		</div>
+		
+	</div>
+
+	
+	<div class="toc-content-container">
+		<div class="post-toc-wrap">
+	<div class="post-toc">
+		<div class="toc-title">On this page</div>
+		<div class="page-title">2024CISCN初赛Easy-VT复现</div>
+		<ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%80%86%E5%90%91%E5%88%86%E6%9E%90"><span class="nav-text">逆向分析</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%E4%B8%80-%E5%88%A9%E7%94%A8%E8%84%9A%E6%9C%AC%E5%8E%BB%E9%99%A4%E6%B7%B7%E6%B7%86"><span class="nav-text">方法一:利用脚本去除混淆</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#jz-1"><span class="nav-text">jz +1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jz-2"><span class="nav-text">jz+2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jz-8"><span class="nav-text">jz+8</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jge-6"><span class="nav-text">jge+6</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jmp-6"><span class="nav-text">jmp+6</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jmp-23"><span class="nav-text">jmp -23</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cmp-reg-0E9h"><span class="nav-text">cmp  reg,0E9h</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8E%BB%E8%8A%B1%E8%84%9A%E6%9C%AC%E7%BC%96%E5%86%99"><span class="nav-text">去花脚本编写</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8E%BB%E9%99%A4%E8%AF%AD%E4%B9%89%E6%B7%B7%E6%B7%86%E8%84%9A%E6%9C%AC%E7%BC%96%E5%86%99"><span class="nav-text">去除语义混淆脚本编写</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%E4%BA%8C-%E5%8A%A8%E6%80%81%E8%B0%83%E8%AF%95"><span class="nav-text">方法二:动态调试</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-text">总结:</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%AB%A0"><span class="nav-text">参考文章</span></a></li></ol>
+
+	</div>
+</div>
+	</div>
+	
+</div>
+			</div>
+
+			
+		</div>
+
+		<div class="main-content-footer">
+			<footer class="footer mt-5 py-5 h-auto text-base text-third-text-color relative border-t-2 border-t-border-color">
+    <div class="info-container py-3 text-center">
+        
+        <div class="text-center">
+            &copy;
+            
+              <span>2022</span>
+              -
+            
+            2025&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">5m10v3</a>
+            
+                
+                <p class="post-count space-x-0.5">
+                    <span>
+                        3 posts in total
+                    </span>
+                    
+                </p>
+            
+        </div>
+        
+            <script data-swup-reload-script src="https://cn.vercount.one/js"></script>
+            <div class="relative text-center lg:absolute lg:right-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-right">
+                
+                    <span id="busuanzi_container_site_uv" class="lg:!block">
+                        <span class="text-sm">VISITOR COUNT</span>
+                        <span id="busuanzi_value_site_uv"></span>
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv" class="lg:!block">
+                        <span class="text-sm">TOTAL PAGE VIEWS</span>
+                        <span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="relative text-center lg:absolute lg:left-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-left">
+            <span class="lg:block text-sm">POWERED BY <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg class="relative top-[2px] inline-block align-baseline" version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" class="text-base" href="https://hexo.io">Hexo</a></span>
+            <span class="text-sm lg:block">THEME&nbsp;<a class="text-base" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.8.2</a></span>
+        </div>
+        
+        
+            <div>
+                Blog up for <span class="odometer" id="runtime_days" ></span> days <span class="odometer" id="runtime_hours"></span> hrs <span class="odometer" id="runtime_minutes"></span> Min <span class="odometer" id="runtime_seconds"></span> Sec
+            </div>
+        
+        
+            <script data-swup-reload-script>
+                try {
+                    function odometer_init() {
+                    const elements = document.querySelectorAll('.odometer');
+                    elements.forEach(el => {
+                        new Odometer({
+                            el,
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    });
+                    }
+                    odometer_init();
+                } catch (error) {}
+            </script>
+        
+        
+        
+    </div>  
+</footer>
+		</div>
+	</div>
+
+	
+	<div class="post-tools">
+		<div class="post-tools-container">
+	<ul class="article-tools-list">
+		<!-- TOC aside toggle -->
+		
+		<li class="right-bottom-tools page-aside-toggle">
+			<i class="fa-regular fa-outdent"></i>
+		</li>
+		
+
+		<!-- go comment -->
+		
+		<li class="go-comment">
+			<i class="fa-regular fa-comments"></i>
+		</li>
+		
+	</ul>
+</div>
+	</div>
+	
+
+	<div class="right-side-tools-container">
+		<div class="side-tools-container">
+	<ul class="hidden-tools-list">
+		<li class="right-bottom-tools tool-font-adjust-plus flex justify-center items-center">
+			<i class="fa-regular fa-magnifying-glass-plus"></i>
+		</li>
+
+		<li class="right-bottom-tools tool-font-adjust-minus flex justify-center items-center">
+			<i class="fa-regular fa-magnifying-glass-minus"></i>
+		</li>
+
+		<li class="right-bottom-tools tool-dark-light-toggle flex justify-center items-center">
+			<i class="fa-regular fa-moon"></i>
+		</li>
+
+		<!-- rss -->
+		
+
+		
+
+		<li class="right-bottom-tools tool-scroll-to-bottom flex justify-center items-center">
+			<i class="fa-regular fa-arrow-down"></i>
+		</li>
+	</ul>
+
+	<ul class="visible-tools-list">
+		<li class="right-bottom-tools toggle-tools-list flex justify-center items-center">
+			<i class="fa-regular fa-cog fa-spin"></i>
+		</li>
+		
+		<li class="right-bottom-tools tool-scroll-to-top flex justify-center items-center">
+			<i class="arrow-up fas fa-arrow-up"></i>
+			<span class="percent"></span>
+		</li>
+		
+		
+	</ul>
+</div>
+	</div>
+
+	<div class="image-viewer-container">
+	<img src="">
+</div>
+
+	
+	<div class="search-pop-overlay">
+	<div class="popup search-popup">
+		<div class="search-header">
+			<span class="search-input-field-pre">
+				<i class="fa-solid fa-keyboard"></i>
+			</span>
+			<div class="search-input-container">
+				<input autocomplete="off" autocorrect="off" autocapitalize="off" placeholder="Search..." spellcheck="false" type="search" class="search-input">
+			</div>
+			<span class="popup-btn-close">
+				<i class="fa-solid fa-times"></i>
+			</span>
+		</div>
+		<div id="search-result">
+			<div id="no-result">
+				<i class="fa-solid fa-spinner fa-spin-pulse fa-5x fa-fw"></i>
+			</div>
+		</div>
+	</div>
+</div>
+	
+
+</main>
+
+
+
+<script src="/js/build/libs/Swup.min.js"></script>
+
+<script src="/js/build/libs/SwupSlideTheme.min.js"></script>
+
+<script src="/js/build/libs/SwupScriptsPlugin.min.js"></script>
+
+<script src="/js/build/libs/SwupProgressPlugin.min.js"></script>
+
+<script src="/js/build/libs/SwupScrollPlugin.min.js"></script>
+
+<script src="/js/build/libs/SwupPreloadPlugin.min.js"></script>
+
+<script>
+    const swup = new Swup({
+        plugins: [
+            new SwupScriptsPlugin({
+                optin: true,
+            }),
+            new SwupProgressPlugin(),
+            new SwupScrollPlugin({
+                offset: 80,
+            }),
+            new SwupSlideTheme({
+                mainElement: ".main-content-body",
+            }),
+            new SwupPreloadPlugin(),
+        ],
+        containers: ["#swup"],
+    });
+</script>
+
+
+
+
+	
+<script src="/js/build/tools/imageViewer.js" type="module"></script>
+
+<script src="/js/build/utils.js" type="module"></script>
+
+<script src="/js/build/main.js" type="module"></script>
+
+<script src="/js/build/layouts/navbarShrink.js" type="module"></script>
+
+<script src="/js/build/tools/scrollTopBottom.js" type="module"></script>
+
+<script src="/js/build/tools/lightDarkSwitch.js" type="module"></script>
+
+<script src="/js/build/layouts/categoryList.js" type="module"></script>
+
+
+
+    
+<script src="/js/build/tools/localSearch.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/build/tools/codeBlock.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/build/layouts/lazyload.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/build/tools/runtime.js"></script>
+
+    
+<script src="/js/build/libs/odometer.min.js"></script>
+
+    
+<link rel="stylesheet" href="/assets/odometer-theme-minimal.css">
+
+
+
+
+  
+<script src="/js/build/libs/Typed.min.js"></script>
+
+  
+<script src="/js/build/plugins/typed.js" type="module"></script>
+
+
+
+
+
+
+
+
+    
+<script src="/js/build/libs/anime.min.js"></script>
+
+
+
+
+
+    
+<script src="/js/build/tools/tocToggle.js" type="module" data-swup-reload-script=""></script>
+
+<script src="/js/build/layouts/toc.js" type="module" data-swup-reload-script=""></script>
+
+<script src="/js/build/plugins/tabs.js" type="module" data-swup-reload-script=""></script>
+
+
+
+
+<script src="/js/build/libs/moment-with-locales.min.js" data-swup-reload-script=""></script>
+
+
+<script src="/js/build/layouts/essays.js" type="module" data-swup-reload-script=""></script>
+
+
+
+
+
+	
+</body>
+
+</html>
