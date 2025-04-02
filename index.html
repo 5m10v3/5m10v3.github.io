@@ -515,8 +515,16 @@
 
                     <div class="home-article-content markdown-body">
                         
-                            <p>Here’s something encrypted, password is required to continue reading.</p>
+                            
+                            逆向分析r3层分析首先拿到赛题对r3的程序进行分析,发现在初始化函数这里有sub_140001000函数 正在进行异或操作
 
+
+
+
+经过动态调试可得v0里面的变量为一张表
+
+
+但我们对qword_7FF79B30AFD8这个地址进行交叉引用的时候我们发现在一个函数里面引用了它，并且这个函数好像是进行base58加密,因此我们知道这里应该是进行了base58换表加密,sub_7FF79B2D2...
                         
                     </div>
 
@@ -542,17 +550,17 @@
                     
                         <li>
                             | 
-                            <a href="/tags/%E6%B8%B8%E6%88%8F%E5%AE%89%E5%85%A8/">游戏安全</a>&nbsp;
-                        </li>
-                    
-                        <li>
-                            | 
                             <a href="/tags/REVERSE/">REVERSE</a>&nbsp;
                         </li>
                     
                         <li>
                             | 
                             <a href="/tags/obfuscation/">obfuscation</a>&nbsp;
+                        </li>
+                    
+                        <li>
+                            | 
+                            <a href="/tags/%E6%B8%B8%E6%88%8F%E5%AE%89%E5%85%A8/">游戏安全</a>&nbsp;
                         </li>
                     
                 </ul>
@@ -703,12 +711,12 @@ La...
                     
                         <li>
                             | 
-                            <a href="/tags/%E6%B8%B8%E6%88%8F%E5%AE%89%E5%85%A8/">游戏安全</a>&nbsp;
+                            <a href="/tags/REVERSE/">REVERSE</a>&nbsp;
                         </li>
                     
                         <li>
                             | 
-                            <a href="/tags/REVERSE/">REVERSE</a>&nbsp;
+                            <a href="/tags/%E6%B8%B8%E6%88%8F%E5%AE%89%E5%85%A8/">游戏安全</a>&nbsp;
                         </li>
                     
                 </ul>
