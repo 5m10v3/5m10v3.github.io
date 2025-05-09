@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    
+    <meta name="author" content="5m10v3">
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="http://example.com/2025/05/08/记一次brainfuck逆向分析/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+    
+    
+        
+        <meta name="description" content="Hexo Theme Redefine, Redefine Your Hexo Journey.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="记一次brainfuck逆向分析">
+<meta property="og:url" content="http://example.com/2025/05/08/%E8%AE%B0%E4%B8%80%E6%AC%A1brainfuck%E9%80%86%E5%90%91%E5%88%86%E6%9E%90/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Hexo Theme Redefine, Redefine Your Hexo Journey.">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/images/redefine-og.webp">
+<meta property="article:published_time" content="2025-05-07T16:00:00.000Z">
+<meta property="article:modified_time" content="2025-05-07T14:35:30.368Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="Windows">
+<meta property="article:tag" content="REVERSE">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/images/redefine-og.webp">
+    
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="/images/1.jpg" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/1.jpg">
+    <meta name="theme-color" content="#A31F34">
+    <link rel="shortcut icon" href="/images/1.jpg">
+    <!--- Page Info-->
+    
+    <title>
+        
+            记一次brainfuck逆向分析 | 5m10v3のBlog
+        
+    </title>
+
+    
+<link rel="stylesheet" href="/fonts/Chillax/chillax.css">
+
+
+    <!--- Inject Part-->
+    
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+        
+<link rel="stylesheet" href="/css/build/tailwind.css">
+
+    
+
+    
+<link rel="stylesheet" href="/fonts/GeistMono/geist-mono.css">
+
+    
+<link rel="stylesheet" href="/fonts/Geist/geist.css">
+
+    <!--- Font Part-->
+    
+    
+    
+    
+    
+    
+
+    <script id="hexo-configurations">
+    window.config = {"hostname":"example.com","root":"/","language":"en"};
+    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"delete_mask":false,"title_alignment":"left","headings_top_spacing":{"h1":"3.2rem","h2":"2.4rem","h3":"1.9rem","h4":"1.6rem","h5":"1.4rem","h6":"1.3rem"}},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":false,"auto":false,"list":[]},"code_block":{"copy":true,"style":"mac","highlight_theme":{"light":"github","dark":"vs2015"},"font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":{"enable":true,"default":"cc_by_nc_sa"},"lazyload":true,"pangu_js":false,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null,"default_mode":"light"},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null},"title":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":false,"percentage":true},"website_counter":{"url":"https://cn.vercount.one/js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"preloader":{"enable":false,"custom_message":null},"open_graph":{"enable":true,"image":"/images/redefine-og.webp","description":"Hexo Theme Redefine, Redefine Your Hexo Journey."},"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"https://s2.loli.net/2025/02/25/4mfHxsDtAWFhLTo.jpg","dark":"https://s2.loli.net/2025/05/07/M69B2jzvExgy1eq.png"},"title":"5m10v3のblog","subtitle":{"text":["随心所欲地享受每一天\\(￣︶￣*\\))","随时随地，浏览记录O(∩_∩)O","欢迎来到我的博客(｡･∀･)ﾉﾞ","正在努力更新博客(ง •_•)ง"],"hitokoto":{"enable":false,"show_author":false,"api":"https://v1.hitokoto.cn"},"typing_speed":150,"backing_speed":30,"starting_delay":1000,"backing_delay":3000,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":false,"style":"default","links":{"github":null,"instagram":null,"zhihu":null,"twitter":null,"email":null},"qrs":{"weixin":null}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null,"lrc":null}]},"mermaid":{"enable":false,"version":"11.4.1"}},"version":"2.8.2","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"width":{"home":"1200px","pages":"1200px"},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"Tags":{"icon":"fa-solid fa-tags","path":"/tags"},"About Me":{"icon":"fa-regular fa-link","path":"/about"},"Links":{"icon":"fa-regular fa-link","path":"/links"}},"search":{"enable":true,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"cloud"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":"一只进击的二进制菜鸡","show_on_mobile":true,"links":null},"article_date_format":"auto","excerpt_length":200,"categories":{"enable":true,"limit":9999},"tags":{"enable":true,"limit":9999}},"footerStart":"2022/8/17 11:45:14"};
+    window.lang_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+    window.data = {"masonry":false};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    
+<link rel="stylesheet" href="/fontawesome/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/brands.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/solid.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/regular.min.css">
+
+    
+    
+    
+    
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+
+<body>
+	<div class="progress-bar-container">
+	
+
+	
+	<span class="pjax-progress-bar"></span>
+	<!--        <span class="swup-progress-icon">-->
+	<!--            <i class="fa-solid fa-circle-notch fa-spin"></i>-->
+	<!--        </span>-->
+	
+</div>
+
+<main class="page-container" id="swup">
+
+	
+
+	<div class="main-content-container flex flex-col justify-between min-h-dvh">
+		<div class="main-content-header">
+			<header class="navbar-container px-6 md:px-12">
+    <div class="navbar-content transition-navbar ">
+        <div class="left">
+            
+                <a class="logo-image h-8 w-8 sm:w-10 sm:h-10 mr-3" href="/">
+                    <img src="/images/1.jpg" class="w-full h-full rounded-sm">
+                </a>
+            
+            <a class="logo-title" href="/">
+                
+                5m10v3のBlog
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/"
+                                        >
+                                    <i class="fa-regular fa-house fa-fw"></i>
+                                    HOME
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/archives"
+                                        >
+                                    <i class="fa-regular fa-archive fa-fw"></i>
+                                    ARCHIVES
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/tags"
+                                        >
+                                    <i class="fa-solid fa-tags fa-fw"></i>
+                                    TAGS
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/about"
+                                        >
+                                    <i class="fa-regular fa-link fa-fw"></i>
+                                    ABOUT ME
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="/links"
+                                        >
+                                    <i class="fa-regular fa-link fa-fw"></i>
+                                    LINKS
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                    
+                        <li class="navbar-item search search-popup-trigger">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile sheet -->
+    <div class="navbar-drawer h-dvh w-full absolute top-0 left-0 bg-background-color flex flex-col justify-between">
+        <ul class="drawer-navbar-list flex flex-col px-4 justify-center items-start">
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/"
+                        >
+                            <span>
+                                HOME
+                            </span>
+                            
+                                <i class="fa-regular fa-house fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/archives"
+                        >
+                            <span>
+                                ARCHIVES
+                            </span>
+                            
+                                <i class="fa-regular fa-archive fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/tags"
+                        >
+                            <span>
+                                TAGS
+                            </span>
+                            
+                                <i class="fa-solid fa-tags fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/about"
+                        >
+                            <span>
+                                ABOUT ME
+                            </span>
+                            
+                                <i class="fa-regular fa-link fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="/links"
+                        >
+                            <span>
+                                LINKS
+                            </span>
+                            
+                                <i class="fa-regular fa-link fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+
+            
+            
+        </ul>
+
+        <div class="statistics flex justify-around my-2.5">
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">4</div>
+        <div class="label text-third-text-color text-sm">Tags</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">0</div>
+        <div class="label text-third-text-color text-sm">Categories</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/archives">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">4</div>
+        <div class="label text-third-text-color text-sm">Posts</div>
+    </a>
+</div>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+		</div>
+
+		<div class="main-content-body transition-fade-up">
+			
+
+			<div class="main-content">
+				<div class="post-page-container flex relative justify-between box-border w-full h-full">
+	<div class="article-content-container">
+
+		<div class="article-title relative w-full">
+			
+			
+			
+			<img src="https://s2.loli.net/2025/05/05/dHyfGYS5cDvztKj.png" alt="记一次brainfuck逆向分析" class="w-full h-60 sm:h-72 md:h-80 object-cover sm:rounded-t-large dark:brightness-75" />
+			
+			<div class="w-full flex items-center absolute bottom-0 justify-start">
+				<h1 class="article-title-cover text-center mx-6 my-6 text-second-text-color bg-background-color-transparent px-4 py-3 text-3xl sm:text-4xl md:text-5xl font-semibold backdrop-blur-lg rounded-xl border border-border-color ">记一次brainfuck逆向分析</h1>
+			</div>
+			
+		</div>
+
+		
+		<div class="article-header flex flex-row gap-2 items-center px-2 sm:px-6 md:px-8">
+			<div class="avatar w-[46px] h-[46px] flex-shrink-0 rounded-medium border border-border-color p-[1px]">
+				<img src="/images/1.jpg">
+			</div>
+			<div class="info flex flex-col justify-between">
+				<div class="author flex items-center">
+					<span class="name text-default-text-color text-lg font-semibold">5m10v3</span>
+					
+				</div>
+				<div class="meta-info">
+					<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2025-05-08</span>
+        <span class="mobile">2025-05-08</span>
+        <span class="hover-info">Created</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2025-05-07 22:35:30</span>
+            <span class="mobile">2025-05-07 22:35:30</span>
+            <span class="hover-info">Updated</span>
+        </span>
+    
+
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/Windows/">Windows</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/REVERSE/">REVERSE</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+				</div>
+			</div>
+		</div>
+		
+
+		
+
+
+		<div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
+			<p>这是笔者第一次分析brainfuck感觉蛮有学习意义的,同时记录一下自己的学习过程,如果有不足之处,请各位师傅多多指正。</p>
+<p>题目下载链接<br><a class="link"   target="_blank" rel="noopener" href="https://wwdj.lanzout.com/ivtkD2vlnspg" >rbf<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<h1 id="Brainfuck介绍"><a href="#Brainfuck介绍" class="headerlink" title="Brainfuck介绍"></a>Brainfuck介绍</h1><p>以下是来自<a class="link"   target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/Brainfuck" >维基百科<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>的介绍</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Brainfuck，简称BF，是一种极小化的程序语言，由Urban Müller在1993年创造。Fuck在英语中是脏话，所以这种语言有时称为Brainf*ck或Brainf***，或者只用简称。</span><br><span class="line">Müller的目标是创建一种简单的、可以用最小的编译器来实现的、符合图灵完全思想的编程语言。这个语言由八种运算符构成，为Amiga机器编写的编译器（第二版）只有240个字节大小。[1]</span><br><span class="line"></span><br><span class="line">Brainfuck的名字已经暗示出来，它的程序代码很难读懂。尽管如此，Brainfuck仍然可以像图灵机一般完成任何计算任务。它虽然计算方式与众不同，但确实能够正确运行。</span><br><span class="line"></span><br><span class="line">这种语言基于一个简单的机器模型。这个机器除了指令以外，还包括：一个以字节为单位、已初始化为零的数组、一个指向该数组的指针（开始时指向数组的第一个字节）、以及用于输入输出的两个字节流。</span><br></pre></td></tr></table></figure></div>
+
+<p>下面是这八种状态的描述，其中每个状态由一个<a class="link"   target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E5%AD%97%E7%AC%A6" >字符<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>标识：</p>
+<table>
+<thead>
+<tr>
+<th align="center">字符</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><code>&gt;</code></td>
+<td align="center">指针加一</td>
+</tr>
+<tr>
+<td align="center"><code>&lt;</code></td>
+<td align="center">指针减一</td>
+</tr>
+<tr>
+<td align="center"><code>+</code></td>
+<td align="center">指针所指字节的值加一</td>
+</tr>
+<tr>
+<td align="center"><code>-</code></td>
+<td align="center">指针所指字节的值减一</td>
+</tr>
+<tr>
+<td align="center"><code>.</code></td>
+<td align="center">输出指针所指字节内容（<a class="link"   target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/ASCII%E7%A0%81" >ASCII码<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>）</td>
+</tr>
+<tr>
+<td align="center"><code>,</code></td>
+<td align="center">向指针所指的字节输入内容（ASCII码）</td>
+</tr>
+<tr>
+<td align="center"><code>[</code></td>
+<td align="center">若指针所指字节的值为零，则向后跳转，跳转到其对应的<code>]</code>的下一个指令处</td>
+</tr>
+<tr>
+<td align="center"><code>]</code></td>
+<td align="center">若指针所指字节的值不为零，则向前跳转，跳转到其对应的<code>[</code>的下一个指令处</td>
+</tr>
+</tbody></table>
+<p>Brainfuck指令可以逐一替换，翻译成<a class="link"   target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/C%E8%AF%AD%E8%A8%80" >C语言<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>（假设<code>ptr</code>是<code>char *</code><a class="link"   target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E8%B3%87%E6%96%99%E9%A1%9E%E5%9E%8B" >类型<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>）的语句之类：</p>
+<table>
+<thead>
+<tr>
+<th align="center">Brainfuck</th>
+<th align="center">C</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><code>&gt;</code></td>
+<td align="center"><code>++ptr;</code></td>
+</tr>
+<tr>
+<td align="center"><code>&lt;</code></td>
+<td align="center"><code>--ptr;</code></td>
+</tr>
+<tr>
+<td align="center"><code>+</code></td>
+<td align="center"><code>++*ptr;</code></td>
+</tr>
+<tr>
+<td align="center"><code>-</code></td>
+<td align="center"><code>--*ptr;</code></td>
+</tr>
+<tr>
+<td align="center"><code>.</code></td>
+<td align="center"><code>putchar(*ptr);</code></td>
+</tr>
+<tr>
+<td align="center"><code>,</code></td>
+<td align="center"><code>*ptr = getchar();</code></td>
+</tr>
+<tr>
+<td align="center"><code>[</code></td>
+<td align="center"><code>while (*ptr) &#123;</code></td>
+</tr>
+<tr>
+<td align="center"><code>]</code></td>
+<td align="center"><code>&#125;</code></td>
+</tr>
+</tbody></table>
+<p>从以上来看它只用了八条指令就实现了图灵完备,那么对于这种题目,比较好的方法就是写一个解释器出来,那么接下来笔者将会通过一道例题来讲解brainfuck的分析思路</p>
+<h1 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h1><h2 id="mini-L2025-rbf"><a href="#mini-L2025-rbf" class="headerlink" title="mini-L2025-rbf"></a>mini-L2025-rbf</h2><p>题目简介如下:</p>
+<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2025/05/08/%E8%AE%B0%E4%B8%80%E6%AC%A1brainfuck%E9%80%86%E5%90%91%E5%88%86%E6%9E%90/image-20250507163109902.png"
+                      class="" title="image-20250507163109902"
+                >
+
+<p>经过java层的分析可知,首先检验flag的格式和长度,然后再调用native的check函数进行校验</p>
+<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2025/05/08/%E8%AE%B0%E4%B8%80%E6%AC%A1brainfuck%E9%80%86%E5%90%91%E5%88%86%E6%9E%90/image-20250507164620161.png"
+                      class="" title="image-20250507164620161"
+                >
+
+<p>native层的check函数会检查flag的内容必须都是小写字母,然后才会调用brainfuck进行flag的检验</p>
+<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2025/05/08/%E8%AE%B0%E4%B8%80%E6%AC%A1brainfuck%E9%80%86%E5%90%91%E5%88%86%E6%9E%90/image-20250507164800162.png"
+                      class="" title="image-20250507164800162"
+                >
+
+<p>直接下断点提取brainfuck的操作码,提取结果如下图:</p>
+<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2025/05/08/%E8%AE%B0%E4%B8%80%E6%AC%A1brainfuck%E9%80%86%E5%90%91%E5%88%86%E6%9E%90/image-20250507164950453.png"
+                      class="" title="image-20250507164950453"
+                >
+
+<p>接下来就是解析器的编写</p>
+<div class="code-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;windows.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;fstream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;map&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">WriteToFile</span><span class="params">(<span class="type">const</span> std::string &amp;file_string, <span class="type">const</span> std::string str)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="function">std::ofstream <span class="title">OsWrite</span><span class="params">(file_string, std::ofstream::trunc)</span></span>;</span><br><span class="line">    OsWrite &lt;&lt; str;</span><br><span class="line">    OsWrite &lt;&lt; std::endl;</span><br><span class="line">    OsWrite.<span class="built_in">close</span>();</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">ProcessLoop</span><span class="params">(<span class="type">uint8_t</span> *Code, <span class="type">int</span> &amp;i, <span class="type">int</span> &amp;p, std::string &amp;Result, <span class="type">int</span> &amp;p_in, <span class="type">int</span> len, <span class="type">int</span> indentLevel = <span class="number">0</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="function">std::string <span class="title">indent</span><span class="params">(indentLevel, <span class="string">&#x27;\t&#x27;</span>)</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="type">char</span> Buf[<span class="number">256</span>]&#123;&#125;;</span><br><span class="line">    <span class="built_in">sprintf</span>(Buf, <span class="string">&quot;%swhile(d[p])\n%s&#123;\n&quot;</span>, indent.<span class="built_in">c_str</span>(), indent.<span class="built_in">c_str</span>());</span><br><span class="line">    Result += Buf;</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> initial_p = p;</span><br><span class="line">    i++;</span><br><span class="line">    <span class="keyword">while</span> (i &lt; len &amp;&amp; Code[i] != <span class="string">&#x27;]&#x27;</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">uint8_t</span> CurrentCode = Code[i];</span><br><span class="line">        <span class="keyword">switch</span> (CurrentCode)</span><br><span class="line">        &#123;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27;&gt;&#x27;</span>:</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">// printf(&quot;++p;&quot;);</span></span><br><span class="line">            <span class="type">int</span> add&#123;&#125;;</span><br><span class="line">            <span class="keyword">while</span> (Code[i] == <span class="string">&#x27;&gt;&#x27;</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                ++add;</span><br><span class="line">                i++;</span><br><span class="line">            &#125;</span><br><span class="line">            i--;</span><br><span class="line">            <span class="keyword">if</span> (add != <span class="number">0</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="built_in">sprintf</span>(Buf, <span class="string">&quot;%s\tp += %d;\n&quot;</span>, indent.<span class="built_in">c_str</span>(), add);</span><br><span class="line">                Result += Buf;</span><br><span class="line">                <span class="comment">// printf(&quot;++p;&quot;);</span></span><br><span class="line">                p += add;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27;&lt;&#x27;</span>:</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">// printf(&quot;--p;&quot;);</span></span><br><span class="line">            <span class="type">int</span> sub&#123;&#125;;</span><br><span class="line">            <span class="keyword">while</span> (Code[i] == <span class="string">&#x27;&lt;&#x27;</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                ++sub;</span><br><span class="line">                i++;</span><br><span class="line">            &#125;</span><br><span class="line">            i--;</span><br><span class="line">            <span class="keyword">if</span> (sub != <span class="number">0</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="built_in">sprintf</span>(Buf, <span class="string">&quot;%s\tp -= %d;\n&quot;</span>, indent.<span class="built_in">c_str</span>(), sub);</span><br><span class="line">                Result += Buf;</span><br><span class="line">                <span class="comment">// printf(&quot;++p;&quot;);</span></span><br><span class="line">                p -= sub;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27;+&#x27;</span>:</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="type">int</span> add&#123;&#125;;</span><br><span class="line">            <span class="keyword">while</span> (i &lt; len &amp;&amp; Code[i] == <span class="string">&#x27;+&#x27;</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                ++add;</span><br><span class="line">                i++;</span><br><span class="line">            &#125;</span><br><span class="line">            i--;</span><br><span class="line">            <span class="keyword">if</span> (add != <span class="number">0</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="comment">// sprintf(Buf, &quot;%s\td[p] += %d;\n&quot;, indent.c_str(), add);</span></span><br><span class="line">                <span class="built_in">sprintf</span>(Buf, <span class="string">&quot;%s\td[p] += %d;\n&quot;</span>, indent.<span class="built_in">c_str</span>(), add);</span><br><span class="line">                Result += Buf;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27;-&#x27;</span>:</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="type">int</span> sub&#123;&#125;;</span><br><span class="line">            <span class="keyword">while</span> (i &lt; len &amp;&amp; Code[i] == <span class="string">&#x27;-&#x27;</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                ++sub;</span><br><span class="line">                i++;</span><br><span class="line">            &#125;</span><br><span class="line">            i--;</span><br><span class="line">            <span class="keyword">if</span> (sub != <span class="number">0</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="comment">// sprintf(Buf, &quot;%s\td[%d] -= %d;\n&quot;, indent.c_str(), p, sub);</span></span><br><span class="line">                <span class="built_in">sprintf</span>(Buf, <span class="string">&quot;%s\td[p] -= %d;\n&quot;</span>, indent.<span class="built_in">c_str</span>(), sub);</span><br><span class="line">                Result += Buf;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27;,&#x27;</span>:</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">// sprintf(Buf, &quot;%s\td[%d] = in[%d];\n&quot;, indent.c_str(), p, p_in);</span></span><br><span class="line">            <span class="built_in">sprintf</span>(Buf, <span class="string">&quot;%s\td[p] = in[p_in];\n%s\t++p_in;\n&quot;</span>, indent.<span class="built_in">c_str</span>(), indent.<span class="built_in">c_str</span>());</span><br><span class="line">            Result += Buf;</span><br><span class="line">            ++p_in;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27;[&#x27;</span>:</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">ProcessLoop</span>(Code, i, p, Result, p_in, len, indentLevel + <span class="number">1</span>);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27;.&#x27;</span>:</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">// sprintf(Buf, &quot;%s\tif(d[%d]==\&#x27;0\&#x27;)\n%s\t\&#123;\n%s%s\t\treturn 0;\n%s\t\&#125;\n%s\tif(d[%d]==\&#x27;1\&#x27;)\n%s\t\&#123;\n%s%s\t\treturn 1;\n%s\t\&#125;\n&quot;, indent.c_str(), p, indent.c_str(), indent.c_str(), indent.c_str(), indent.c_str(), indent.c_str(), p, indent.c_str(), indent.c_str(), indent.c_str(), indent.c_str());</span></span><br><span class="line">            <span class="built_in">sprintf</span>(Buf, <span class="string">&quot;%s\tif(d[p]==\&#x27;0\&#x27;)\n%s\t\&#123;\n%s%s\t\tbreak;\n%s\t\&#125;\n%s\tif(d[p]==\&#x27;1\&#x27;)\n%s\t\&#123;\n%s%s\t\tbreak;\n%s\t\&#125;\n&quot;</span>, indent.<span class="built_in">c_str</span>(), indent.<span class="built_in">c_str</span>(), indent.<span class="built_in">c_str</span>(), indent.<span class="built_in">c_str</span>(), indent.<span class="built_in">c_str</span>(), indent.<span class="built_in">c_str</span>(), indent.<span class="built_in">c_str</span>(), indent.<span class="built_in">c_str</span>(), indent.<span class="built_in">c_str</span>(), indent.<span class="built_in">c_str</span>());</span><br><span class="line">            Result += Buf;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">default</span>:</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        i++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">sprintf</span>(Buf, <span class="string">&quot;%s&#125;\n&quot;</span>, indent.<span class="built_in">c_str</span>());</span><br><span class="line">    Result += Buf;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> index = <span class="number">0</span>;</span><br><span class="line">    <span class="function">std::ifstream <span class="title">bfCodeFile</span><span class="params">(<span class="string">&quot;bf.txt&quot;</span>)</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="type">uint8_t</span> *Code = <span class="keyword">new</span> <span class="type">uint8_t</span>[<span class="number">45000</span>];</span><br><span class="line">    <span class="keyword">if</span> (!bfCodeFile.<span class="built_in">is_open</span>())</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">delete</span>[] Code;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    bfCodeFile.<span class="built_in">seekg</span>(<span class="number">0</span>, std::ios::end);</span><br><span class="line">    <span class="type">int</span> len = bfCodeFile.<span class="built_in">tellg</span>();</span><br><span class="line">    bfCodeFile.<span class="built_in">seekg</span>(<span class="number">0</span>, std::ios::beg);</span><br><span class="line">    bfCodeFile.<span class="built_in">read</span>((<span class="type">char</span> *)Code, len);</span><br><span class="line"></span><br><span class="line">    std::string Result;</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> p = <span class="number">0</span>;</span><br><span class="line">    <span class="type">int</span> p_in = <span class="number">0</span>;</span><br><span class="line">    <span class="type">char</span> Buf[<span class="number">256</span>]&#123;&#125;;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; len; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">uint8_t</span> CurrentCode = Code[i];</span><br><span class="line">        <span class="keyword">switch</span> (CurrentCode)</span><br><span class="line">        &#123;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27;&gt;&#x27;</span>:</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="type">int</span> add&#123;&#125;;</span><br><span class="line">            <span class="keyword">while</span> (Code[i] == <span class="string">&#x27;&gt;&#x27;</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                ++add;</span><br><span class="line">                i++;</span><br><span class="line">            &#125;</span><br><span class="line">            i--;</span><br><span class="line">            <span class="keyword">if</span> (add != <span class="number">0</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="built_in">sprintf</span>(Buf, <span class="string">&quot;p += %d;\n&quot;</span>, add);</span><br><span class="line">                Result += Buf;</span><br><span class="line">                <span class="comment">// printf(&quot;++p;&quot;);</span></span><br><span class="line">                p += add;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27;&lt;&#x27;</span>:</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="type">int</span> sub&#123;&#125;;</span><br><span class="line">            <span class="keyword">while</span> (Code[i] == <span class="string">&#x27;&lt;&#x27;</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                ++sub;</span><br><span class="line">                i++;</span><br><span class="line">            &#125;</span><br><span class="line">            i--;</span><br><span class="line">            <span class="keyword">if</span> (sub != <span class="number">0</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="built_in">sprintf</span>(Buf, <span class="string">&quot;p -= %d;\n&quot;</span>, sub);</span><br><span class="line">                Result += Buf;</span><br><span class="line">                <span class="comment">// printf(&quot;++p;&quot;);</span></span><br><span class="line">                p -= sub;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27;+&#x27;</span>:</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="type">int</span> add&#123;&#125;;</span><br><span class="line">            <span class="keyword">while</span> (Code[i] == <span class="string">&#x27;+&#x27;</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                ++add;</span><br><span class="line">                i++;</span><br><span class="line">            &#125;</span><br><span class="line">            i--;</span><br><span class="line">            <span class="keyword">if</span> (add != <span class="number">0</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="comment">// sprintf(Buf, &quot;d[%d] += %d;\n&quot;, p, add);</span></span><br><span class="line">                <span class="built_in">sprintf</span>(Buf, <span class="string">&quot;d[p] += %d;\n&quot;</span>, add);</span><br><span class="line">                Result += Buf;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27;-&#x27;</span>:</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="type">int</span> sub&#123;&#125;;</span><br><span class="line">            <span class="keyword">while</span> (Code[i] == <span class="string">&#x27;-&#x27;</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                ++sub;</span><br><span class="line">                i++;</span><br><span class="line">            &#125;</span><br><span class="line">            i--;</span><br><span class="line">            <span class="keyword">if</span> (sub != <span class="number">0</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="comment">// sprintf(Buf, &quot;d[%d] -= %d;\n&quot;, p, sub);</span></span><br><span class="line">                <span class="built_in">sprintf</span>(Buf, <span class="string">&quot;d[p] -= %d;\n&quot;</span>, sub);</span><br><span class="line">                Result += Buf;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27;,&#x27;</span>:</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">// sprintf(Buf, &quot;d[%d] = in[%d];\n&quot;, p, p_in);</span></span><br><span class="line">            <span class="built_in">sprintf</span>(Buf, <span class="string">&quot;d[p] = in[p_in];\n++p_in;\n&quot;</span>);</span><br><span class="line">            Result += Buf;</span><br><span class="line">            ++p_in;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27;[&#x27;</span>:</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">ProcessLoop</span>(Code, i, p, Result, p_in, len);</span><br><span class="line">            <span class="comment">// 格式化注释</span></span><br><span class="line">            Result += <span class="string">&quot;//&quot;</span> + std::<span class="built_in">to_string</span>(index++) + <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">            Result += <span class="string">&quot;for(int count = 13;count&lt;13+35;count++)&#123;printf(\&quot;\%d,\&quot;,d[count]);&#125;printf(\&quot;\\n\&quot;);\n&quot;</span>;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">&#x27;.&#x27;</span>:</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">// sprintf(Buf, &quot;if(d[%d]==\&#x27;0\&#x27;)\n\&#123;\n\treturn 0;\n\&#125;\nif(d[%d]==\&#x27;1\&#x27;)\n\&#123;\n\treturn 1;\n\&#125;\n&quot;, p, p);</span></span><br><span class="line">            <span class="built_in">sprintf</span>(Buf, <span class="string">&quot;if(d[p]==\&#x27;0\&#x27;)\n\&#123;\n\treturn 0;\n\&#125;\nif(d[p]==\&#x27;1\&#x27;)\n\&#123;\n\treturn 1;\n\&#125;\n&quot;</span>);</span><br><span class="line">            Result += Buf;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">default</span>:</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">WriteToFile</span>(<span class="string">&quot;C_Code.txt&quot;</span>, Result);</span><br><span class="line">END:</span><br><span class="line">    bfCodeFile.<span class="built_in">close</span>();</span><br><span class="line">    <span class="keyword">delete</span>[] Code;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>其实大家也可以直接去网上找脚本然后自己改,这里我添加了一些东西,我们在遍历完循环之后有一个数据的输出，为啥从13开始因为经过调试发现从13开始正好就是我们输入的值-‘a’，然后我又增加了行数注释，这样我们在调试我们生成的代码样本的时候可以全局搜索然后定位到具体的分析位置。</p>
+<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2025/05/08/%E8%AE%B0%E4%B8%80%E6%AC%A1brainfuck%E9%80%86%E5%90%91%E5%88%86%E6%9E%90/image-20250507165539006.png"
+                      class="" title="image-20250507165539006"
+                >
+
+<p>输出的C_code如下图:</p>
+<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2025/05/08/%E8%AE%B0%E4%B8%80%E6%AC%A1brainfuck%E9%80%86%E5%90%91%E5%88%86%E6%9E%90/image-20250507170032310.png"
+                      class="" title="image-20250507170032310"
+                >
+
+<p>然后我们直接运行这个程序，这里为啥选择<strong>xydefghijklm</strong>作为示例输入，稍后笔者会给出答案，输出结果如下图:</p>
+<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2025/05/08/%E8%AE%B0%E4%B8%80%E6%AC%A1brainfuck%E9%80%86%E5%90%91%E5%88%86%E6%9E%90/image-20250507170240565.png"
+                      class="" title="image-20250507170240565"
+                >
+
+<p>才1719行数据也不是很多,然后我们就可以注意到前12列，正好就是我们的示例输入-‘a’,这里为啥不用a,b这些，在笔者多次测试下00，01很容易混淆，所以笔者选择了<strong>xydefghijklm</strong>。</p>
+<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2025/05/08/%E8%AE%B0%E4%B8%80%E6%AC%A1brainfuck%E9%80%86%E5%90%91%E5%88%86%E6%9E%90/image-20250507170327312.png"
+                      class="" title="image-20250507170327312"
+                >
+
+<p>我们接着分析这些数据,前面那些行很显然是可以直接删去的</p>
+<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2025/05/08/%E8%AE%B0%E4%B8%80%E6%AC%A1brainfuck%E9%80%86%E5%90%91%E5%88%86%E6%9E%90/image-20250507170554437.png"
+                      class="" title="image-20250507170554437"
+                >
+
+<p>然后我们一眼盯真，发现了类似下标值的东西,我们不确定继续往下面找，最终确定确实是下标值，那么我们是不是可以想成就是循环，然后每个循环之间还有一些00，其实可以删掉。</p>
+<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2025/05/08/%E8%AE%B0%E4%B8%80%E6%AC%A1brainfuck%E9%80%86%E5%90%91%E5%88%86%E6%9E%90/image-20250507170746665.png"
+                      class="" title="image-20250507170746665"
+                >
+
+<p>分离出每一个循环之后，我们发现每个循环的末尾都有一个值，比如下图这个就是F7，这里很显然就是cmp</p>
+<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2025/05/08/%E8%AE%B0%E4%B8%80%E6%AC%A1brainfuck%E9%80%86%E5%90%91%E5%88%86%E6%9E%90/image-20250507171319986.png"
+                      class="" title="image-20250507171319986"
+                >
+<p>那么我们看一下什么情况才是正确的情况，最后d[p]的值必须为’1’</p>
+<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2025/05/08/%E8%AE%B0%E4%B8%80%E6%AC%A1brainfuck%E9%80%86%E5%90%91%E5%88%86%E6%9E%90/image-20250507171725116.png"
+                      class="" title="image-20250507171725116"
+                >
+
+<p>我们在输出的C_code里面发现后面是有两个while循环的，但这两个while循环又是固定的两种情况,一种是+7,一种是+8，因此必须让它走第一个while循环才行</p>
+<div class="code-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> (d[p])</span><br><span class="line">&#123;</span><br><span class="line">	p += <span class="number">1</span>;</span><br><span class="line">	d[p] -= <span class="number">1</span>;</span><br><span class="line">	p += <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">while</span> (d[p])</span><br><span class="line">	&#123;</span><br><span class="line">		d[p] -= <span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	p += <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">while</span> (d[p])</span><br><span class="line">	&#123;</span><br><span class="line">		d[p] -= <span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	p -= <span class="number">1</span>;</span><br><span class="line">	p += <span class="number">1</span>;</span><br><span class="line">	d[p] += <span class="number">7</span>;</span><br><span class="line">	<span class="keyword">while</span> (d[p])</span><br><span class="line">	&#123;</span><br><span class="line">		p -= <span class="number">1</span>;</span><br><span class="line">		d[p] += <span class="number">7</span>;</span><br><span class="line">		p += <span class="number">1</span>;</span><br><span class="line">		d[p] -= <span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	p -= <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">if</span> (d[p] == <span class="string">&#x27;0&#x27;</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">break</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> (d[p] == <span class="string">&#x27;1&#x27;</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">break</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	p -= <span class="number">2</span>;</span><br><span class="line">	<span class="keyword">while</span> (d[p])</span><br><span class="line">	&#123;</span><br><span class="line">		d[p] -= <span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//1717</span></span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> count = <span class="number">13</span>; count &lt; <span class="number">13</span> + <span class="number">35</span>; count++) &#123; <span class="built_in">printf</span>(<span class="string">&quot;%02X &quot;</span>, d[count]); &#125;<span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">p += <span class="number">1</span>;</span><br><span class="line"><span class="keyword">while</span> (d[p])</span><br><span class="line">&#123;</span><br><span class="line">	p += <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">while</span> (d[p])</span><br><span class="line">	&#123;</span><br><span class="line">		d[p] -= <span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	p += <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">while</span> (d[p])</span><br><span class="line">	&#123;</span><br><span class="line">		d[p] -= <span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	p -= <span class="number">1</span>;</span><br><span class="line">	p += <span class="number">1</span>;</span><br><span class="line">	d[p] += <span class="number">6</span>;</span><br><span class="line">	<span class="keyword">while</span> (d[p])</span><br><span class="line">	&#123;</span><br><span class="line">		p -= <span class="number">1</span>;</span><br><span class="line">		d[p] += <span class="number">8</span>;</span><br><span class="line">		p += <span class="number">1</span>;</span><br><span class="line">		d[p] -= <span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	p -= <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">if</span> (d[p] == <span class="string">&#x27;0&#x27;</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">break</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> (d[p] == <span class="string">&#x27;1&#x27;</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">break</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	p -= <span class="number">1</span>;</span><br><span class="line">	d[p] -= <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//1718</span></span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> count = <span class="number">13</span>; count &lt; <span class="number">13</span> + <span class="number">35</span>; count++) &#123; <span class="built_in">printf</span>(<span class="string">&quot;%02X &quot;</span>, d[count]); &#125;<span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">p -= <span class="number">27</span>;</span><br></pre></td></tr></table></figure></div>
+
+<p>回到我们之前分析的打印的数据那里这三列，第一列是我们自己经过加密后的数据,第二列是我们需要相等的数据(但是这个需要相等的数据不完全是打印出来的这个数字)，需要我们去验证一下，因为我们所框的第二排数据是我们的密文减去我们加密的数据，这个数字是正确的，因此我们只需要用下面的数字加上我们自己输入的加密数据就可以得出密文，然后如果每一组对比正确的话第三排的第一列就会返回1</p>
+<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2025/05/08/%E8%AE%B0%E4%B8%80%E6%AC%A1brainfuck%E9%80%86%E5%90%91%E5%88%86%E6%9E%90/image-20250507172422102.png"
+                      class="" title="image-20250507172422102"
+                >
+
+<p>接下来我们就要分析每个循环里面的加密流程，他每个加密流程都是如下图这样，都是一个一个的方程组</p>
+<img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/2025/05/08/%E8%AE%B0%E4%B8%80%E6%AC%A1brainfuck%E9%80%86%E5%90%91%E5%88%86%E6%9E%90/image-20250507173654103.png"
+                      class="" title="image-20250507173654103"
+                >
+
+<p>然后手动提取方程组写个z3求解就行</p>
+<div class="code-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> z3 <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line">enc = [<span class="number">0xFD</span>, <span class="number">0xC7</span>, <span class="number">0xF8</span>, <span class="number">0x93</span>, <span class="number">0x9E</span>, <span class="number">0x66</span>, <span class="number">0xC0</span>, <span class="number">0xA9</span>, <span class="number">0xFF</span>, <span class="number">0xF3</span>, <span class="number">0xDC</span>, <span class="number">0xE5</span>]</span><br><span class="line"><span class="built_in">input</span> = [BitVec(<span class="string">f&quot;input<span class="subst">&#123;i&#125;</span>&quot;</span>, <span class="number">8</span>) <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">12</span>)]</span><br><span class="line">s = Solver()</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">12</span>):</span><br><span class="line"> s.add(<span class="built_in">input</span>[i] &gt;=<span class="number">0</span>, <span class="built_in">input</span>[i] &lt;= <span class="number">26</span>)</span><br><span class="line">Temp =[<span class="number">0</span>]*<span class="number">12</span></span><br><span class="line">Temp[<span class="number">0</span>]=<span class="number">0x03</span>*<span class="built_in">input</span>[<span class="number">0</span>] + <span class="number">0x03</span>*<span class="built_in">input</span>[<span class="number">1</span>] + <span class="number">0x03</span>*<span class="built_in">input</span>[<span class="number">2</span>] + <span class="number">0x03</span>*<span class="built_in">input</span>[<span class="number">3</span>] + <span class="number">0x01</span>*<span class="built_in">input</span>[<span class="number">4</span>] + <span class="number">0x01</span>*<span class="built_in">input</span>[<span class="number">5</span>] + <span class="number">0x03</span>*<span class="built_in">input</span>[<span class="number">7</span>] + <span class="number">0x02</span>*<span class="built_in">input</span>[<span class="number">10</span>] +<span class="number">0x03</span>*<span class="built_in">input</span>[<span class="number">11</span>]</span><br><span class="line">Temp[<span class="number">1</span>]=<span class="number">0x03</span>*<span class="built_in">input</span>[<span class="number">0</span>] + <span class="number">0x02</span>*<span class="built_in">input</span>[<span class="number">1</span>] + <span class="number">0x02</span>*<span class="built_in">input</span>[<span class="number">2</span>] + <span class="number">0x02</span>*<span class="built_in">input</span>[<span class="number">3</span>] + <span class="number">0x02</span>*<span class="built_in">input</span>[<span class="number">4</span>] + <span class="number">0x02</span>*<span class="built_in">input</span>[<span class="number">6</span>] + <span class="number">0x01</span>*<span class="built_in">input</span>[<span class="number">7</span>] + <span class="number">0x02</span>*<span class="built_in">input</span>[<span class="number">8</span>]</span><br><span class="line">Temp[<span class="number">2</span>]=<span class="number">0x02</span>*<span class="built_in">input</span>[<span class="number">0</span>] + <span class="number">0x03</span>*<span class="built_in">input</span>[<span class="number">2</span>] + <span class="number">0x03</span>*<span class="built_in">input</span>[<span class="number">5</span>] + <span class="number">0x03</span>*<span class="built_in">input</span>[<span class="number">6</span>] + <span class="number">0x01</span>*<span class="built_in">input</span>[<span class="number">7</span>] + <span class="number">0x01</span>*<span class="built_in">input</span>[<span class="number">8</span>] + <span class="number">0x02</span>*<span class="built_in">input</span>[<span class="number">9</span>] + <span class="number">0x03</span>*<span class="built_in">input</span>[<span class="number">10</span>]+ <span class="number">0x01</span>*<span class="built_in">input</span>[<span class="number">11</span>]</span><br><span class="line">Temp[<span class="number">3</span>]=<span class="number">0x02</span>*<span class="built_in">input</span>[<span class="number">2</span>] + <span class="number">0x03</span>*<span class="built_in">input</span>[<span class="number">6</span>] + <span class="number">0x02</span>*<span class="built_in">input</span>[<span class="number">7</span>] + <span class="number">0x03</span>*<span class="built_in">input</span>[<span class="number">8</span>] + <span class="number">0x02</span>*<span class="built_in">input</span>[<span class="number">10</span>]</span><br><span class="line">Temp[<span class="number">4</span>]=<span class="number">0x01</span>*<span class="built_in">input</span>[<span class="number">0</span>] + <span class="number">0x02</span>*<span class="built_in">input</span>[<span class="number">1</span>] + <span class="number">0x02</span>*<span class="built_in">input</span>[<span class="number">2</span>] + <span class="number">0x01</span>*<span class="built_in">input</span>[<span class="number">3</span>] + <span class="number">0x02</span>*<span class="built_in">input</span>[<span class="number">5</span>] + <span class="number">0x01</span>*<span class="built_in">input</span>[<span class="number">8</span>] + <span class="number">0x02</span>*<span class="built_in">input</span>[<span class="number">10</span>] + <span class="number">0x01</span>*<span class="built_in">input</span>[<span class="number">11</span>]</span><br><span class="line">Temp[<span class="number">5</span>]=<span class="number">0x03</span>*<span class="built_in">input</span>[<span class="number">1</span>] + <span class="number">0x03</span>*<span class="built_in">input</span>[<span class="number">5</span>] + <span class="number">0x02</span>*<span class="built_in">input</span>[<span class="number">6</span>] + <span class="number">0x02</span>*<span class="built_in">input</span>[<span class="number">10</span>] + <span class="number">0x01</span>*<span class="built_in">input</span>[<span class="number">11</span>]</span><br><span class="line">Temp[<span class="number">6</span>]=<span class="number">0x01</span>*<span class="built_in">input</span>[<span class="number">0</span>] + <span class="number">0x01</span>*<span class="built_in">input</span>[<span class="number">1</span>] + <span class="number">0x03</span>*<span class="built_in">input</span>[<span class="number">2</span>] + <span class="number">0x01</span>*<span class="built_in">input</span>[<span class="number">5</span>] + <span class="number">0x02</span>*<span class="built_in">input</span>[<span class="number">6</span>] + <span class="number">0x02</span>*<span class="built_in">input</span>[<span class="number">7</span>] + <span class="number">0x02</span>*<span class="built_in">input</span>[<span class="number">8</span>] + <span class="number">0x02</span>*<span class="built_in">input</span>[<span class="number">9</span>] + <span class="number">0x01</span>*<span class="built_in">input</span>[<span class="number">10</span>] + <span class="number">0x02</span>*<span class="built_in">input</span>[<span class="number">11</span>]</span><br><span class="line">Temp[<span class="number">7</span>]=<span class="number">0x03</span>*<span class="built_in">input</span>[<span class="number">0</span>] + <span class="number">0x02</span>*<span class="built_in">input</span>[<span class="number">1</span>] + <span class="number">0x02</span>*<span class="built_in">input</span>[<span class="number">2</span>] + <span class="number">0x02</span>*<span class="built_in">input</span>[<span class="number">4</span>] + <span class="number">0x01</span>*<span class="built_in">input</span>[<span class="number">5</span>] + <span class="number">0x02</span>*<span class="built_in">input</span>[<span class="number">8</span>] + <span class="number">0x01</span>*<span class="built_in">input</span>[<span class="number">10</span>] + <span class="number">0x01</span>*<span class="built_in">input</span>[<span class="number">11</span>]</span><br><span class="line">Temp[<span class="number">8</span>]=<span class="number">0x03</span>*<span class="built_in">input</span>[<span class="number">0</span>] + <span class="number">0x03</span>*<span class="built_in">input</span>[<span class="number">1</span>] + <span class="number">0x03</span>*<span class="built_in">input</span>[<span class="number">2</span>] + <span class="number">0x03</span>*<span class="built_in">input</span>[<span class="number">3</span>] + <span class="number">0x01</span>*<span class="built_in">input</span>[<span class="number">4</span>] + <span class="number">0x02</span>*<span class="built_in">input</span>[<span class="number">5</span>] + <span class="number">0x02</span>*<span class="built_in">input</span>[<span class="number">6</span>] + <span class="number">0x02</span>*<span class="built_in">input</span>[<span class="number">9</span>] + <span class="number">0x02</span>*<span class="built_in">input</span>[<span class="number">11</span>]</span><br><span class="line">Temp[<span class="number">9</span>]=<span class="number">0x01</span>*<span class="built_in">input</span>[<span class="number">0</span>] + <span class="number">0x01</span>*<span class="built_in">input</span>[<span class="number">1</span>] + <span class="number">0x02</span>*<span class="built_in">input</span>[<span class="number">3</span>] + <span class="number">0x02</span>*<span class="built_in">input</span>[<span class="number">4</span>] + <span class="number">0x02</span>*<span class="built_in">input</span>[<span class="number">5</span>] + <span class="number">0x02</span>*<span class="built_in">input</span>[<span class="number">6</span>] + <span class="number">0x02</span>*<span class="built_in">input</span>[<span class="number">7</span>] + <span class="number">0x02</span>*<span class="built_in">input</span>[<span class="number">8</span>] + <span class="number">0x03</span>*<span class="built_in">input</span>[<span class="number">10</span>] + <span class="number">0x01</span>*<span class="built_in">input</span>[<span class="number">11</span>]</span><br><span class="line">Temp[<span class="number">10</span>]=<span class="number">0x03</span>*<span class="built_in">input</span>[<span class="number">1</span>] + <span class="number">0x02</span>*<span class="built_in">input</span>[<span class="number">2</span>] + <span class="number">0x01</span>*<span class="built_in">input</span>[<span class="number">5</span>] + <span class="number">0x01</span>*<span class="built_in">input</span>[<span class="number">6</span>] + <span class="number">0x02</span>*<span class="built_in">input</span>[<span class="number">7</span>] + <span class="number">0x03</span>*<span class="built_in">input</span>[<span class="number">8</span>] + <span class="number">0x03</span>*<span class="built_in">input</span>[<span class="number">9</span>] + <span class="number">0x03</span>*<span class="built_in">input</span>[<span class="number">10</span>] + <span class="number">0x01</span>*<span class="built_in">input</span>[<span class="number">11</span>]</span><br><span class="line">Temp[<span class="number">11</span>]=<span class="number">0x03</span>*<span class="built_in">input</span>[<span class="number">0</span>] + <span class="number">0x03</span>*<span class="built_in">input</span>[<span class="number">1</span>] + <span class="number">0x03</span>*<span class="built_in">input</span>[<span class="number">3</span>] + <span class="number">0x01</span>*<span class="built_in">input</span>[<span class="number">4</span>] + <span class="number">0x02</span>*<span class="built_in">input</span>[<span class="number">5</span>] + <span class="number">0x03</span>*<span class="built_in">input</span>[<span class="number">6</span>] + <span class="number">0x02</span>*<span class="built_in">input</span>[<span class="number">7</span>] + <span class="number">0x01</span>*<span class="built_in">input</span>[<span class="number">9</span>] + <span class="number">0x02</span>*<span class="built_in">input</span>[<span class="number">10</span>] + <span class="number">0x03</span>*<span class="built_in">input</span>[<span class="number">11</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">12</span>):</span><br><span class="line">  s.add(Temp[j] == enc[j])</span><br><span class="line"><span class="keyword">if</span> s.check() == sat:</span><br><span class="line">    m = s.model()</span><br><span class="line">    solution = [m.evaluate(<span class="built_in">input</span>[i]).as_long() <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">12</span>)]</span><br><span class="line">    Flag = [(v+<span class="number">0x61</span>)&amp;<span class="number">0xFF</span> <span class="keyword">for</span> v <span class="keyword">in</span> solution]</span><br><span class="line">    flag = <span class="string">&#x27;&#x27;</span>.join(<span class="built_in">chr</span>(c) <span class="keyword">for</span> c <span class="keyword">in</span> Flag)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;miniLCTF&#123;&quot;</span>+flag+<span class="string">&quot;&#125;&quot;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;No solution found&quot;</span>)</span><br><span class="line"><span class="comment"># miniLCTF&#123;favyxwekppoa&#125;</span></span><br></pre></td></tr></table></figure></div>
+
+
+		</div>
+
+		
+		<div class="post-copyright-info w-full my-8 px-2 sm:px-6 md:px-8">
+			<div class="article-copyright-info-container">
+    <ul>
+        <li><strong>Title:</strong> 记一次brainfuck逆向分析</li>
+        <li><strong>Author:</strong> 5m10v3</li>
+        <li><strong>Created at
+                :</strong> 2025-05-08 00:00:00</li>
+        
+            <li>
+                <strong>Updated at
+                    :</strong> 2025-05-07 22:35:30
+            </li>
+        
+        <li>
+            <strong>Link:</strong> https://redefine.ohevan.com/2025/05/08/记一次brainfuck逆向分析/
+        </li>
+        <li>
+            <strong>
+                License:
+            </strong>
+            
+
+            
+                This work is licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0">CC BY-NC-SA 4.0</a>.
+            
+        </li>
+    </ul>
+</div>
+
+		</div>
+		
+
+		
+		<ul class="post-tags-box text-lg mt-1.5 flex-wrap justify-center flex md:hidden">
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/Windows/">#Windows</a>&nbsp;
+			</li>
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/REVERSE/">#REVERSE</a>&nbsp;
+			</li>
+			
+		</ul>
+		
+
+		
+
+		
+		<div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
+			
+			
+			<div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+				<a class="next" rel="next" href="/2025/03/31/2025%E8%85%BE%E8%AE%AF%E6%B8%B8%E6%88%8F%E5%AE%89%E5%85%A8%E7%AB%9E%E8%B5%9B%E6%8A%80%E6%9C%AF%E7%AB%9E%E8%B5%9B%E5%88%9D%E8%B5%9B%E9%A2%98%E8%A7%A3/">
+					<span class="title flex justify-center items-center">
+						<span class="post-nav-title-item">2025腾讯游戏安全竞赛技术竞赛初赛题解</span>
+						<span class="post-nav-item">Next posts</span>
+					</span>
+					<span class="right arrow-icon flex justify-center items-center">
+						<i class="fa-solid fa-chevron-right"></i>
+					</span>
+				</a>
+			</div>
+			
+		</div>
+		
+
+
+		
+		<div class="comment-container px-2 sm:px-6 md:px-8 pb-8">
+			<div class="comments-container mt-10 w-full ">
+    <div id="comment-anchor" class="w-full h-2.5"></div>
+    <div class="comment-area-title w-full my-1.5 md:my-2.5 text-xl md:text-3xl font-bold">
+        Comments
+    </div>
+    
+
+        
+            
+    <div id="waline"></div>
+    <script type="module" data-swup-reload-script>
+      import { init } from '/js/libs/waline.mjs';
+
+      function loadWaline() {
+        init({
+          el: '#waline',
+          serverURL: 'https://example.example.com',
+          lang: 'zh-CN',
+          dark: 'body[class~="dark-mode"]',
+          reaction: false,
+          requiredMeta: ['nick', 'mail'],
+          emoji: [],
+          
+          
+        });
+      }
+
+      if (typeof swup !== 'undefined') {
+        loadWaline();
+      } else {
+        window.addEventListener('DOMContentLoaded', loadWaline);
+      }
+    </script>
+
+
+
+        
+    
+</div>
+
+		</div>
+		
+	</div>
+
+	
+	<div class="toc-content-container">
+		<div class="post-toc-wrap">
+	<div class="post-toc">
+		<div class="toc-title">On this page</div>
+		<div class="page-title">记一次brainfuck逆向分析</div>
+		<ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Brainfuck%E4%BB%8B%E7%BB%8D"><span class="nav-text">Brainfuck介绍</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BE%8B%E9%A2%98"><span class="nav-text">例题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#mini-L2025-rbf"><span class="nav-text">mini-L2025-rbf</span></a></li></ol></li></ol>
+
+	</div>
+</div>
+	</div>
+	
+</div>
+			</div>
+
+			
+		</div>
+
+		<div class="main-content-footer">
+			<footer class="footer mt-5 py-5 h-auto text-base text-third-text-color relative border-t-2 border-t-border-color">
+    <div class="info-container py-3 text-center">
+        
+        <div class="text-center">
+            &copy;
+            
+              <span>2022</span>
+              -
+            
+            2025&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">5m10v3</a>
+            
+                
+                <p class="post-count space-x-0.5">
+                    <span>
+                        4 posts in total
+                    </span>
+                    
+                </p>
+            
+        </div>
+        
+            <script data-swup-reload-script src="https://cn.vercount.one/js"></script>
+            <div class="relative text-center lg:absolute lg:right-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-right">
+                
+                    <span id="busuanzi_container_site_uv" class="lg:!block">
+                        <span class="text-sm">VISITOR COUNT</span>
+                        <span id="busuanzi_value_site_uv"></span>
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv" class="lg:!block">
+                        <span class="text-sm">TOTAL PAGE VIEWS</span>
+                        <span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="relative text-center lg:absolute lg:left-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-left">
+            <span class="lg:block text-sm">POWERED BY <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg class="relative top-[2px] inline-block align-baseline" version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" class="text-base" href="https://hexo.io">Hexo</a></span>
+            <span class="text-sm lg:block">THEME&nbsp;<a class="text-base" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.8.2</a></span>
+        </div>
+        
+        
+            <div>
+                Blog up for <span class="odometer" id="runtime_days" ></span> days <span class="odometer" id="runtime_hours"></span> hrs <span class="odometer" id="runtime_minutes"></span> Min <span class="odometer" id="runtime_seconds"></span> Sec
+            </div>
+        
+        
+            <script data-swup-reload-script>
+                try {
+                    function odometer_init() {
+                    const elements = document.querySelectorAll('.odometer');
+                    elements.forEach(el => {
+                        new Odometer({
+                            el,
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    });
+                    }
+                    odometer_init();
+                } catch (error) {}
+            </script>
+        
+        
+        
+    </div>  
+</footer>
+		</div>
+	</div>
+
+	
+	<div class="post-tools">
+		<div class="post-tools-container">
+	<ul class="article-tools-list">
+		<!-- TOC aside toggle -->
+		
+		<li class="right-bottom-tools page-aside-toggle">
+			<i class="fa-regular fa-outdent"></i>
+		</li>
+		
+
+		<!-- go comment -->
+		
+		<li class="go-comment">
+			<i class="fa-regular fa-comments"></i>
+		</li>
+		
+	</ul>
+</div>
+	</div>
+	
+
+	<div class="right-side-tools-container">
+		<div class="side-tools-container">
+	<ul class="hidden-tools-list">
+		<li class="right-bottom-tools tool-font-adjust-plus flex justify-center items-center">
+			<i class="fa-regular fa-magnifying-glass-plus"></i>
+		</li>
+
+		<li class="right-bottom-tools tool-font-adjust-minus flex justify-center items-center">
+			<i class="fa-regular fa-magnifying-glass-minus"></i>
+		</li>
+
+		<li class="right-bottom-tools tool-dark-light-toggle flex justify-center items-center">
+			<i class="fa-regular fa-moon"></i>
+		</li>
+
+		<!-- rss -->
+		
+
+		
+
+		<li class="right-bottom-tools tool-scroll-to-bottom flex justify-center items-center">
+			<i class="fa-regular fa-arrow-down"></i>
+		</li>
+	</ul>
+
+	<ul class="visible-tools-list">
+		<li class="right-bottom-tools toggle-tools-list flex justify-center items-center">
+			<i class="fa-regular fa-cog fa-spin"></i>
+		</li>
+		
+		<li class="right-bottom-tools tool-scroll-to-top flex justify-center items-center">
+			<i class="arrow-up fas fa-arrow-up"></i>
+			<span class="percent"></span>
+		</li>
+		
+		
+	</ul>
+</div>
+	</div>
+
+	<div class="image-viewer-container">
+	<img src="">
+</div>
+
+	
+	<div class="search-pop-overlay">
+	<div class="popup search-popup">
+		<div class="search-header">
+			<span class="search-input-field-pre">
+				<i class="fa-solid fa-keyboard"></i>
+			</span>
+			<div class="search-input-container">
+				<input autocomplete="off" autocorrect="off" autocapitalize="off" placeholder="Search..." spellcheck="false" type="search" class="search-input">
+			</div>
+			<span class="popup-btn-close">
+				<i class="fa-solid fa-times"></i>
+			</span>
+		</div>
+		<div id="search-result">
+			<div id="no-result">
+				<i class="fa-solid fa-spinner fa-spin-pulse fa-5x fa-fw"></i>
+			</div>
+		</div>
+	</div>
+</div>
+	
+
+</main>
+
+
+
+<script src="/js/build/libs/Swup.min.js"></script>
+
+<script src="/js/build/libs/SwupSlideTheme.min.js"></script>
+
+<script src="/js/build/libs/SwupScriptsPlugin.min.js"></script>
+
+<script src="/js/build/libs/SwupProgressPlugin.min.js"></script>
+
+<script src="/js/build/libs/SwupScrollPlugin.min.js"></script>
+
+<script src="/js/build/libs/SwupPreloadPlugin.min.js"></script>
+
+<script>
+    const swup = new Swup({
+        plugins: [
+            new SwupScriptsPlugin({
+                optin: true,
+            }),
+            new SwupProgressPlugin(),
+            new SwupScrollPlugin({
+                offset: 80,
+            }),
+            new SwupSlideTheme({
+                mainElement: ".main-content-body",
+            }),
+            new SwupPreloadPlugin(),
+        ],
+        containers: ["#swup"],
+    });
+</script>
+
+
+
+
+	
+<script src="/js/build/tools/imageViewer.js" type="module"></script>
+
+<script src="/js/build/utils.js" type="module"></script>
+
+<script src="/js/build/main.js" type="module"></script>
+
+<script src="/js/build/layouts/navbarShrink.js" type="module"></script>
+
+<script src="/js/build/tools/scrollTopBottom.js" type="module"></script>
+
+<script src="/js/build/tools/lightDarkSwitch.js" type="module"></script>
+
+<script src="/js/build/layouts/categoryList.js" type="module"></script>
+
+
+
+    
+<script src="/js/build/tools/localSearch.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/build/tools/codeBlock.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/build/layouts/lazyload.js" type="module"></script>
+
+
+
+
+    
+<script src="/js/build/tools/runtime.js"></script>
+
+    
+<script src="/js/build/libs/odometer.min.js"></script>
+
+    
+<link rel="stylesheet" href="/assets/odometer-theme-minimal.css">
+
+
+
+
+  
+<script src="/js/build/libs/Typed.min.js"></script>
+
+  
+<script src="/js/build/plugins/typed.js" type="module"></script>
+
+
+
+
+
+
+
+
+    
+<script src="/js/build/libs/anime.min.js"></script>
+
+
+
+
+
+    
+<script src="/js/build/tools/tocToggle.js" type="module" data-swup-reload-script=""></script>
+
+<script src="/js/build/layouts/toc.js" type="module" data-swup-reload-script=""></script>
+
+<script src="/js/build/plugins/tabs.js" type="module" data-swup-reload-script=""></script>
+
+
+
+
+<script src="/js/build/libs/moment-with-locales.min.js" data-swup-reload-script=""></script>
+
+
+<script src="/js/build/layouts/essays.js" type="module" data-swup-reload-script=""></script>
+
+
+
+
+
+	
+</body>
+
+</html>
